@@ -91,7 +91,8 @@ function getSonarFile(repo) {
   sonar.test=src
   sonar.test.inclusions=**/*.spec.ts
   sonar.exclusions=**/*.module.ts, **/utils/**
-  sonar.javascript.lcov.reportPaths=coverage/lcov.info`;
+  sonar.javascript.lcov.reportPaths=coverage/front/lcov.info
+  sonar.testExecutionReportPaths=reports/ut_report.xml`;
   return content;
 }
 

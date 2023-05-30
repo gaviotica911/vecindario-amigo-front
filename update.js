@@ -5,15 +5,7 @@ const execShPromise = require("exec-sh").promise;
 let fs = require("fs");
 
 const projects = [
-  { name: "ISIS3710_202310_S2_E1_Back" },
-  { name: "ISIS3710_202310_S2_E2_Back" },
-  { name: "ISIS3710_202310_S2_E3_Back" },
-  { name: "ISIS3710_202310_S2_E4_Back" },
-  { name: "ISIS3710_202310_S2_E5_Back" },
-  { name: "ISIS3710_202310_S2_E6_Back" },
-  { name: "ISIS3710_202310_S2_E7_Back" },
-  { name: "ISIS3710_202310_S2_E8_Back" },
-  { name: "ISIS3710_202310_S2_E9_Back" },
+  { name: "ISIS2603_202310_S2_E1_Autos_Front" }
 ];
 
 const config = {

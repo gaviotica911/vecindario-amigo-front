@@ -5,7 +5,7 @@ const execShPromise = require("exec-sh").promise;
 let fs = require("fs");
 
 const projects = [
-  { name: "MISW4104_202315_E01" },
+  /*{ name: "MISW4104_202315_E01" },
   { name: "MISW4104_202315_E02" },
   { name: "MISW4104_202315_E03" },
   { name: "MISW4104_202315_E04" },
@@ -25,7 +25,7 @@ const projects = [
   { name: "MISW4104_202315_E18" },
   { name: "MISW4104_202315_E19" },
   { name: "MISW4104_202315_E20" },
-  { name: "MISW4104_202315_E21" },
+  { name: "MISW4104_202315_E21" },*/
   { name: "MISW4104_202315_E22" },
   { name: "MISW4104_202315_E23" },
   { name: "MISW4104_202315_E24" },

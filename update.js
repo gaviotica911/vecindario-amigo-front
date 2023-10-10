@@ -42,7 +42,7 @@ const projects = [
   { name: "MISW4104_202315_E35" },
 ];
 
-/*const config = {
+/*const config  = {
   organization: "Uniandes-isis2603",
   gitKey: "de5cd571-10da-4034-8ba8-af99beef4b14",
   sonarServer: "sonar-isis2603",

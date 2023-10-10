@@ -5,22 +5,56 @@ const execShPromise = require("exec-sh").promise;
 let fs = require("fs");
 
 const projects = [
-  { name: "ISIS2603_202310_S2_E1_Autos_Front" }
+  { name: "MISW4104_202315_E01" },
+  { name: "MISW4104_202315_E02" },
+  { name: "MISW4104_202315_E03" },
+  { name: "MISW4104_202315_E04" },
+  { name: "MISW4104_202315_E05" },
+  { name: "MISW4104_202315_E06" },
+  { name: "MISW4104_202315_E07" },
+  { name: "MISW4104_202315_E08" },
+  { name: "MISW4104_202315_E09" },
+  { name: "MISW4104_202315_E10" },
+  { name: "MISW4104_202315_E11" },
+  { name: "MISW4104_202315_E12" },
+  { name: "MISW4104_202315_E13" },
+  { name: "MISW4104_202315_E14" },
+  { name: "MISW4104_202315_E15" },
+  { name: "MISW4104_202315_E16" },
+  { name: "MISW4104_202315_E17" },
+  { name: "MISW4104_202315_E18" },
+  { name: "MISW4104_202315_E19" },
+  { name: "MISW4104_202315_E20" },
+  { name: "MISW4104_202315_E21" },
+  { name: "MISW4104_202315_E22" },
+  { name: "MISW4104_202315_E23" },
+  { name: "MISW4104_202315_E24" },
+  { name: "MISW4104_202315_E25" },
+  { name: "MISW4104_202315_E26" },
+  { name: "MISW4104_202315_E27" },
+  { name: "MISW4104_202315_E28" },
+  { name: "MISW4104_202315_E29" },
+  { name: "MISW4104_202315_E30" },
+  { name: "MISW4104_202315_E31" },
+  { name: "MISW4104_202315_E32" },
+  { name: "MISW4104_202315_E33" },
+  { name: "MISW4104_202315_E34" },
+  { name: "MISW4104_202315_E35" },
 ];
 
-const config = {
+/*const config = {
   organization: "Uniandes-isis2603",
   gitKey: "de5cd571-10da-4034-8ba8-af99beef4b14",
   sonarServer: "sonar-isis2603",
   jenkinsServer: "jenkins-isis2603",
-};
+};*/
 
-/*const config = {
+const config = {
   organization: "MISW-4104-Web",
-  gitKey: "277a9d46-cf19-4119-afd9-4054a7d35151",
+  gitKey: "43771338-0057-4a96-ae03-93ee5419d871",
   sonarServer: "sonar-misovirtual",
   jenkinsServer: "jenkins-misovirtual",
-};*/
+};
 
 const createRepos = async () => {
   let out;
@@ -99,17 +133,16 @@ function getJenkinsFile(repo) {
     stages {
        stage('Checkout') {
           steps {
-             scmSkip(deleteBuild: true, skipPattern:'.*\\\\[ci-skip\\\\].*')
              git branch: 'master',
                 credentialsId: env.GIT_CREDENTIAL_ID,
                 url: 'https://github.com/${config.organization}/' + env.GIT_REPO
           }
        }
-       stage('GitInspector') { 
+       stage('GitInspector') {
          steps {
             withCredentials([usernamePassword(credentialsId: env.GIT_CREDENTIAL_ID, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                sh 'mkdir -p code-analyzer-report'
-               sh """ curl --request POST --url https://code-analyzer.virtual.uniandes.edu.co/analyze --header "Content-Type: application/json" --data '{"repo_url":"git@github.com:${config.organization}/\${GIT_REPO}.git", "access_token": "\${GIT_PASSWORD}" }' > code-analyzer-report/index.html """   
+               sh """ curl --request POST --url https://code-analyzer.virtual.uniandes.edu.co/analyze --header "Content-Type: application/json" --data '{"repo_url":"git@github.com:${config.organization}/\${GIT_REPO}.git", "access_token": "\${GIT_PASSWORD}" }' > code-analyzer-report/index.html """
             }
             publishHTML (target: [
                allowMissing: false,
@@ -159,15 +192,13 @@ function getJenkinsFile(repo) {
     }
     post {
       always {
-         // Clean workspace
-         cleanWs(cleanWhenNotBuilt: false,
-            deleteDirs: true,
-            disableDeferredWipeout: true,
-            notFailBuild: true,
-            patterns: [[pattern: '.gitignore', type: 'INCLUDE'],
-                       [pattern: '.propsfile', type: 'EXCLUDE']])
+        cleanWs()
+        deleteDir()
+        dir("\${env.GIT_REPO}@tmp") {
+          deleteDir()
+        }
       }
-    }
+   }
   }
   `;
   return content;

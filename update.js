@@ -5,56 +5,45 @@ const execShPromise = require("exec-sh").promise;
 let fs = require("fs");
 
 const projects = [
-  /*{ name: "MISW4104_202315_E01" },
-  { name: "MISW4104_202315_E02" },
-  { name: "MISW4104_202315_E03" },
-  { name: "MISW4104_202315_E04" },
-  { name: "MISW4104_202315_E05" },
-  { name: "MISW4104_202315_E06" },
-  { name: "MISW4104_202315_E07" },
-  { name: "MISW4104_202315_E08" },
-  { name: "MISW4104_202315_E09" },
-  { name: "MISW4104_202315_E10" },
-  { name: "MISW4104_202315_E11" },
-  { name: "MISW4104_202315_E12" },
-  { name: "MISW4104_202315_E13" },
-  { name: "MISW4104_202315_E14" },
-  { name: "MISW4104_202315_E15" },
-  { name: "MISW4104_202315_E16" },
-  { name: "MISW4104_202315_E17" },
-  { name: "MISW4104_202315_E18" },
-  { name: "MISW4104_202315_E19" },
-  { name: "MISW4104_202315_E20" },
-  { name: "MISW4104_202315_E21" },*/
-  { name: "MISW4104_202315_E22" },
-  { name: "MISW4104_202315_E23" },
-  { name: "MISW4104_202315_E24" },
-  { name: "MISW4104_202315_E25" },
-  { name: "MISW4104_202315_E26" },
-  { name: "MISW4104_202315_E27" },
-  { name: "MISW4104_202315_E28" },
-  { name: "MISW4104_202315_E29" },
-  { name: "MISW4104_202315_E30" },
-  { name: "MISW4104_202315_E31" },
-  { name: "MISW4104_202315_E32" },
-  { name: "MISW4104_202315_E33" },
-  { name: "MISW4104_202315_E34" },
-  { name: "MISW4104_202315_E35" },
+  { name: "202320_S1_E1_Mundiales_Front" },
+  { name: "202320_S1_E2_LigaAjedrez_Front" },
+  { name: "202320_S1_E3_Trekking_Front" },
+  { name: "202320_S1_E4_CarMotor_Front" },
+  { name: "202320_S2_E1_Relax_Front" },
+  { name: "202320_S2_E2_OrganizadorFiestas_Front " },
+  { name: "202320_S2_E3_VisitasEcologicas_Front " },
+  { name: "202320_S2_E4_PremiosPeliculas_Front" },
+  { name: "202320_S3_E1_ViviendaUniversitaria_Front" },
+  { name: "202320_S3_E2_OrganizacionEventos_Front" },
+  { name: "202320_S3_E3_LabXR_Front " },
+  { name: "202320_S3_E4_TuOutfit_Front" },
+  { name: "202320_S4_E1_VecindarioAmigo_Front" },
+  { name: "202320_S4_E2_TiendaAeromodelismo_Front" },
+  { name: "202320_S4_E3_AdopcionMascotas_Front " },
+  { name: "202320_S4_E4_BikeLovers_Front " },
+  { name: "202320_S5_E1_DogSpa_Front" },
+  { name: "202320_S5_E2_TheSpa_Front" },
+  { name: "202320_S5_E3_Streaming_Front" },
+  { name: "202320_S5_E4_BiciSalidas_Front" },
+  { name: "202320_S6_E1_ESPorts_Front " },
+  { name: "202320_S6_E2_CulturasGastronomicas_Front" },
+  { name: "202320_S6_E3_CreaTuPC_Front " },
+  { name: "202320_S6_E4_Series_Front " },
 ];
 
-/*const config  = {
+const config = {
   organization: "Uniandes-isis2603",
-  gitKey: "de5cd571-10da-4034-8ba8-af99beef4b14",
+  gitKey: "7c21addc-0cbf-4f2e-9bd8-eced479c56c6",
   sonarServer: "sonar-isis2603",
   jenkinsServer: "jenkins-isis2603",
-};*/
+};
 
-const config = {
+/*const config = {
   organization: "MISW-4104-Web",
   gitKey: "43771338-0057-4a96-ae03-93ee5419d871",
   sonarServer: "sonar-misovirtual",
   jenkinsServer: "jenkins-misovirtual",
-};
+};*/
 
 const createRepos = async () => {
   let out;

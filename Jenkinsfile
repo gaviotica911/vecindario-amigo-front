@@ -1,19 +1,33 @@
-pipeline { 
+pipeline {
     agent any
     environment {
-       GIT_REPO = 'ISIS2603_202220_S1_E5_AutosDeportivos_Front'
-       GIT_CREDENTIAL_ID = 'de5cd571-10da-4034-8ba8-af99beef4b14'
-       SONARQUBE_URL = 'http://172.24.100.52:8082/sonar-isis2603'
+       GIT_REPO = 'MISW4104_202315_E01'
+       GIT_CREDENTIAL_ID = '43771338-0057-4a96-ae03-93ee5419d871'
+       SONARQUBE_URL = 'http://172.24.100.52:8082/sonar-misovirtual'
     }
     stages {
        stage('Checkout') {
           steps {
-             scmSkip(deleteBuild: true, skipPattern:'.*\\[ci-skip\\].*')
-
              git branch: 'master',
                 credentialsId: env.GIT_CREDENTIAL_ID,
-                url: 'https://github.com/Uniandes-isis2603/' + env.GIT_REPO
+                url: 'https://github.com/MISW-4104-Web/' + env.GIT_REPO
           }
+       }
+       stage('GitInspector') {
+         steps {
+            withCredentials([usernamePassword(credentialsId: env.GIT_CREDENTIAL_ID, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+               sh 'mkdir -p code-analyzer-report'
+               sh """ curl --request POST --url https://code-analyzer.virtual.uniandes.edu.co/analyze --header "Content-Type: application/json" --data '{"repo_url":"git@github.com:MISW-4104-Web/${GIT_REPO}.git", "access_token": "${GIT_PASSWORD}" }' > code-analyzer-report/index.html """
+            }
+            publishHTML (target: [
+               allowMissing: false,
+               alwaysLinkToLastBuild: false,
+               keepAll: true,
+               reportDir: 'code-analyzer-report',
+               reportFiles: 'index.html',
+               reportName: "GitInspector"
+            ])
+         }
        }
        stage('Build') {
           // Build app
@@ -34,10 +48,10 @@ pipeline {
           steps {
              script {
                 docker.image('citools-isis2603:latest').inside('-u root') {
-                   sh '''
-                      ng test --watch=false --code-coverage true
-                      npm run sonar
-                   '''
+                  sh '''
+                    ng test --watch=false --code-coverage true
+                    npm run sonar
+                  '''
                 }
              }
           }
@@ -52,10 +66,13 @@ pipeline {
        }
     }
     post {
-       always {
-          // Clean workspace
-          cleanWs deleteDirs: true
-       }
-    }
+      always {
+        cleanWs()
+        deleteDir()
+        dir("${env.GIT_REPO}@tmp") {
+          deleteDir()
+        }
+      }
+   }
   }
   

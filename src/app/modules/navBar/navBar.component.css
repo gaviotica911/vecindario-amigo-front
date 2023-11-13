@@ -1,0 +1,31 @@
+/* Estilos Generales de la Navbar */
+.navbar {
+    background-color: #000000; /* Fondo oscuro */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); /* Sombra más marcada */
+}
+
+/* Título de la Navbar */
+.navbar-brand h1 {
+    color: #ffffff; /* Letra blanca */
+    font-family: 'Helvetica Neue', sans-serif; /* Fuente moderna */
+    text-shadow: 2px 2px 4px #000000; /* Sombra para resaltar el texto */
+}
+
+/* Enlaces de la Navbar */
+.navbar-nav .nav-link {
+    font-size: 1.2rem; /* Tamaño de la letra */
+    margin-right: 20px; /* Espacio a la derecha de cada enlace */
+    color: #00aeff; /* Color azul neón */
+    font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
+}
+
+/* Enlace Activo de la Navbar */
+.navbar-nav .nav-link.active {
+    font-weight: bold; /* Letra más gruesa para el enlace activo */
+    color: #ff5733; /* Color naranja neón para el enlace activo */
+}
+
+/* Botón de la Navbar para móviles */
+.navbar-toggler {
+    border-color: #00aeff; /* Borde del botón en azul neón */
+}

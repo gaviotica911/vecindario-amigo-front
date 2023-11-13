@@ -40,4 +40,5 @@ a:active #text_for_app_contact {
 /* Estilo para el footer */
 footer {
   flex-shrink: 0;
+  background-color: black;
 }

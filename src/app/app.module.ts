@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GrupoDeInteresModule } from './grupoDeInteres/grupoDeInteres.module';
 
+import { VecinoModule } from './vecino/vecino.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -13,7 +15,8 @@ import { GrupoDeInteresModule } from './grupoDeInteres/grupoDeInteres.module';
     GrupoDeInteresModule,
     BrowserModule,
     AppRoutingModule,
-    GrupoDeInteresModule
+    GrupoDeInteresModule,
+    VecinoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

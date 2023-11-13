@@ -1,0 +1,43 @@
+/* Estilos para los iconos del footer (LinkedIn, GitHub, Envelope) */
+.bi-linkedin, .bi-github, .bi-envelope {
+    color: white;
+}
+
+/* Cambios de color al pasar el mouse por encima de los iconos */
+a:hover svg,
+a:hover #text_for_app_contact {
+    color: rgb(168, 21, 21);
+}
+
+/* Cambios de color al hacer clic en los iconos */
+a:active svg,
+a:active #text_for_app_contact {
+    color: rgb(255, 0, 0);
+}
+
+/* Estilos para los textos de contacto debajo de los iconos */
+#text_for_app_contact {
+  font-family: 'Heebo', sans-serif;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Estilos para el texto 'Contact me' */
+.contact_me {
+  font-size: 2em;
+  font-family: 'Fasthand', cursive;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para el texto de derechos de autor en el footer */
+.Copyright {
+  font-size: 1.1em;
+  font-family: 'Fasthand', cursive;
+  color: white;
+}
+
+/* Estilo para el footer */
+footer {
+  flex-shrink: 0;
+}

@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { GrupoDeInteresModule } from './grupoDeInteres/grupoDeInteres.module';
 
 import { VecinoModule } from './vecino/vecino.module';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavBarModule } from './modules/navBar/navBar.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [		
+    AppComponent,
+    FooterComponent
+   ],
   imports: [
+    NavBarModule,
     GrupoDeInteresModule,
     BrowserModule,
     AppRoutingModule,

@@ -1,63 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
-/* Estilos para los iconos del footer (LinkedIn, GitHub, Envelope) */
-.bi-linkedin, .bi-github, .bi-envelope {
-    color: white; /* Ya definido en tu CSS */
-  }
-  
-  /* Cambios de color al pasar el mouse por encima de los iconos */
-  a:hover svg,
-  a:hover #text_for_app_contact
-   {
-      color: rgb(168, 21, 21); /* Ya definido en tu CSS */
-  }
-  
-  /* Cambios de color al hacer clic en los iconos */
-  a:active svg,
-  a:active #text_for_app_contact {
-      color: rgb(255, 0, 0); /* Ya definido en tu CSS */
-  }
-  
-  /* Estilos para los textos de contacto debajo de los iconos */
-  #text_for_app_contact {
-    font-family: 'Heebo', sans-serif;
-    color: white;
-    font-size: 1rem; /* Ya definido en tu CSS */
-  }
-  
-  /* Estilos para el texto 'Contact me' */
-  .contact_me {
-    font-size: 2em;
-    font-family: 'Fasthand', cursive;
-    color: white;
-    margin-bottom: 0.5rem; /* Ya definido en tu CSS */
-  }
-  
-  /* Estilos para el texto de derechos de autor en el footer */
-  .Copyright {
-    font-size: 1.1em;
-    font-family: 'Fasthand', cursive;
-    color: white; /* Ya definido en tu CSS */
-  }
+/* Estilos globales y configuraciones de Flexbox */
 
-  a{
+/* Configuración de Flexbox para el body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Estilo para el contenido principal */
+  app-root {
+    flex-grow: 1; /* Permite que el contenido principal crezca para ocupar el espacio disponible */
+  }
+  
+  a {
     text-decoration: none;
   }
-
-  /* Configuración de Flexbox para el body */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* Estilo para el contenido principal */
-app-root {
-  flex-grow: 1; /* Permite que el contenido principal crezca para ocupar el espacio disponible */
-}
-
-/* Estilo para el footer */
-footer {
-  flex-shrink: 0; /* Evita que el footer se encoja */
-}
-
-

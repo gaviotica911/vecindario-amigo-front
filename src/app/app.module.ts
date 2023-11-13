@@ -9,6 +9,7 @@ import { VecinoModule } from './vecino/vecino.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavBarModule } from './modules/navBar/navBar.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ZonaVerdeModule } from './zonaVerde/zonaVerde.module';
 
 @NgModule({
   declarations: [		
@@ -22,7 +23,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     GrupoDeInteresModule,
     VecinoModule,
-    HttpClientModule
+    HttpClientModule,
+    ZonaVerdeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

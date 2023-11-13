@@ -3,26 +3,12 @@
 <!-- Main Content Area -->
 <main class="mt-4">
   <div class="container">
+    <app-zonaVerde-list></app-zonaVerde-list>
     <router-outlet></router-outlet>
   </div>
 
-  <li class="nav-item dropdown">
-    <a
-      class="nav-link dropdown-toggle"
-      href="#"
-      id="navbarDropdown"
-      role="button"
-      data-bs-toggle="dropdown"
-      aria-expanded="false">Lista de vecinos</a>
 
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <li>
-        <a class="dropdown-item" routerLink="/vecinos/list">List</a>
-      </li>
-     
-    </ul>
-  </li>
-  <app-vecino-list> </app-vecino-list>
+  
 </main>
 
 <app-footer></app-footer>

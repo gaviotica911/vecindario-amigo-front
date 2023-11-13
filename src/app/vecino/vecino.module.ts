@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VecinoComponent } from './vecino.component';
+import { VecinoListComponent } from './vecino-list/vecino-list.component';
+
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [VecinoComponent],
-  exports: [VecinoComponent]
+  declarations: [VecinoListComponent],
+  exports: [VecinoListComponent]
 })
 export class VecinoModule { }

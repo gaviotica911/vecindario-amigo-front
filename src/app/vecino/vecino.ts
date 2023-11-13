@@ -4,7 +4,7 @@ export class Vecino {
     edad: number;
     profilePic: string;
     descripcion: string;
-   
+
     public constructor(ID: number, nombre: string, edad: number, profilePic: string, descripcion: string) {
         this.ID = ID;
         this.nombre = nombre;

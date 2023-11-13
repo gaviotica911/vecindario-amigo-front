@@ -1,7 +1,45 @@
 <testExecutions version="1">
+  <file path="src/app/grupoDeInteres/grupoDeInteres.service.spec.ts">
+    <testCase name="Service: Book should ..." duration="5"/>
+  </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'base-project'" duration="118"/>
-    <testCase name="AppComponent should create the app" duration="14"/>
-    <testCase name="AppComponent should render title" duration="13"/>
+    <testCase name="AppComponent should have as title 'base-project'" duration="20"/>
+    <testCase name="AppComponent should render title" duration="5"/>
+    <testCase name="AppComponent should create the app" duration="1"/>
+  </file>
+  <file path="src/app/components/footer/footer.component.spec.ts">
+    <testCase name="FooterComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/vecino/vecino-list/vecino-list.component.spec.ts">
+    <testCase name="VecinoListComponent should create" duration="1"/>
+  </file>
+  <file path="src/app/vecino/vecino.service.spec.ts">
+    <testCase name="Service: Vecino should ..." duration="1"/>
+  </file>
+  <file path="src/app/grupoDeInteres/grupoDeInteres-list/grupoDeInteres-list.component.spec.ts">
+    <testCase name="GrupoDeInteresListComponent should create" duration="14">
+      <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[GrupoDeInteresService -&gt; HttpClient -&gt; HttpClient]: 
+  NullInjectorError: No provider for HttpClient!
+error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'GrupoDeInteresService', 'HttpClient', 'HttpClient' ] })
+NullInjectorError: R3InjectorError(DynamicTestModule)[GrupoDeInteresService -&gt; HttpClient -&gt; HttpClient]: 
+  NullInjectorError: No provider for HttpClient!
+    at NullInjector.get (node_modules/@angular/core/fesm2015/core.mjs:11120:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11287:1)
+    at injectInjectorOnly (node_modules/@angular/core/fesm2015/core.mjs:4765:1)
+    at ɵɵinject (node_modules/@angular/core/fesm2015/core.mjs:4769:1)
+    at Object.GrupoDeInteresService_Factory [as factory] (ng:///GrupoDeInteresService/ɵfac.js:4:49)
+    at R3Injector.hydrate (node_modules/@angular/core/fesm2015/core.mjs:11457:1)
+    at R3Injector.get (node_modules/@angular/core/fesm2015/core.mjs:11276:1)
+    at NgModuleRef.get (node_modules/@angular/core/fesm2015/core.mjs:21832:1)
+    at Object.get (node_modules/@angular/core/fesm2015/core.mjs:21509:1)
+
+Error: Expected undefined to be truthy.
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (src/app/grupoDeInteres/grupoDeInteres-list/grupoDeInteres-list.component.spec.ts:26:23)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
+</failure>
+    </testCase>
   </file>
 </testExecutions>

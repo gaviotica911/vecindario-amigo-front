@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { VecinoListComponent } from './vecino-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('VecinoListComponent', () => {
   let component: VecinoListComponent;
@@ -11,6 +12,7 @@ describe('VecinoListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ VecinoListComponent ]
     })
     .compileComponents();

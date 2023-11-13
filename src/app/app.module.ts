@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavBarModule } from './modules/navBar/navBar.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { VecindariosModule } from './modules/vecindarios/vecindarios.module';
+import { ZonaVerdeModule } from './zonaVerde/zonaVerde.module';
 
 @NgModule({
   declarations: [		
@@ -24,7 +25,8 @@ import { VecindariosModule } from './modules/vecindarios/vecindarios.module';
     GrupoDeInteresModule,
     VecinoModule,
     HttpClientModule,
-    VecindariosModule
+    VecindariosModule,
+    ZonaVerdeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

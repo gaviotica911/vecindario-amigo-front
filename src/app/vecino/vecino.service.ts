@@ -8,7 +8,7 @@ import { Vecino } from './vecino';
   providedIn: 'root'
 })
 export class VecinoService {
-  private apiUrl = environment.baseUrl + '/vecinos';
+  private apiUrl = environment.baseUrl + 'vecinos';
 
 constructor(private http: HttpClient) { }
 

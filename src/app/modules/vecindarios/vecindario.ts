@@ -1,4 +1,4 @@
-import { Negocio } from "app/modules/negocio/negocio";
+import { Negocio } from "app/modules/negocios/negocios";
 import { Vecino } from "app/vecino/vecino";
 import { ZonaVerde } from "app/zonaVerde/zonaVerde";
 

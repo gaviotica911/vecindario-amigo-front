@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Vecindario } from 'src/app/modules/vecindarios/vecindario';
 import { Vecino } from '../vecino';
 import { VecinoService } from '../vecino.service';
+import { VecinoDetail } from '../vecino-detail';
 
 describe('VecinoListComponent', () => {
  let component: VecinoListComponent;
@@ -36,13 +37,14 @@ describe('VecinoListComponent', () => {
    );
 
    for(let i = 0; i < 10; i++) {
-     const vecino = new Vecino(
+     const vecino = new VecinoDetail(
        faker.datatype.number(),
        faker.lorem.sentence(),
        faker.datatype.number(),
        faker.lorem.sentence(),
        faker.image.imageUrl(),
        vecindario,
+       []
      );
      component.vecinos.push(vecino);
    }

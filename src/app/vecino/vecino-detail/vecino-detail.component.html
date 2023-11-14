@@ -5,7 +5,7 @@
       <div class="thumb">
         <img
           class="img-fluid"
-          src="{{ vecinoDetail.profilePicture }}"
+          src="{{ vecinoDetail.profilePic }}"
           alt="{{ vecinoDetail.nombre }}"
         />
       </div>
@@ -22,6 +22,11 @@
         <hr />
         <dt class="bold">Description</dt>
         <dd>{{ vecinoDetail.descripcion }}</dd>
+        <dt>Publicaciones</dt>
+<dd class="caption" *ngFor="let post of vecinoDetail.publicaciones">
+ {{ post.contenido }}
+</dd>
+
       </dl>
     </div>
   </div>

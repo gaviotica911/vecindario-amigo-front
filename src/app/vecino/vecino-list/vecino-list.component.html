@@ -1,3 +1,12 @@
+<div *ngIf="selected">
+  <app-vecino-detail [vecinoDetail]="selectedVecino"></app-vecino-detail>
+ </div>
+ 
+ <hr />
+ 
+
+
+
 <div class="container-fluid">
   <div class="row">
     <div class="col mb-2" *ngFor="let vecino of vecinos">
@@ -13,7 +22,7 @@
                 <h5 class="card-title">{{ vecino.nombre }}</h5>
                 <p class="card-text">Edad: {{ vecino.edad }}</p>
                 <p class="card-text">Descripcion: {{ vecino.descripcion }}</p>
-                 <!-- <p class="card-text">[{{ vecino.editorial.name }}]</p> -->
+                <p class="card-text">Vecindario: [{{ vecino.vecindairo.name }}]</p>
               </div>
            </div>
       </div>

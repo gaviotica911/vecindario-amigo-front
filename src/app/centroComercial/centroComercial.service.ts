@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
-import { CentroComercial } from './centro-comercial';
+import { CentroComercial } from './centroComercial';
 
 @Injectable({
   providedIn: 'root',

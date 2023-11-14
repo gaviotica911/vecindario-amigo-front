@@ -1,7 +1,7 @@
 
 import { Vecino } from './vecino';
 import { Publicacion } from './publicacion';
-import { Vecindario } from '../modules/vecindarios/vecindario';
+import { Vecindario } from '../vecindarios/vecindario';
 
 export class VecinoDetail extends Vecino{
     publicaciones: Array<Publicacion>=[];

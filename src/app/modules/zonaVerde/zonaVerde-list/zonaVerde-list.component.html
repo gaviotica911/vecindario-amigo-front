@@ -1,0 +1,20 @@
+
+<div class="container-fluid">
+   <div class="row">
+     <div *ngFor="let zonasVerdes of zonasVerdes" class="col mb-2">
+           <div class="card p-2" style="width: 15rem; height: 33rem">
+               <img
+                 class="card-img-top"
+                 src="https://wowcan.com.co/wp-content/uploads/2018/06/autumn-walk-1792812_1920-1080x675.jpg"
+                 
+               />
+               <div class="card-body">
+                 <h5 class="card-title">{{ zonasVerdes.nombre }}</h5>
+                 <p class="card-text">descripcion: {{ zonasVerdes.descripcion }}</p>
+                 <p class="card-text">Ubicacion: {{ zonasVerdes.ubicacion }}</p>
+                 <p class="card-text">Vecindario: [{{ zonasVerdes.vecindario.nombre }}]</p>
+               </div>
+            </div>
+       </div>
+    </div>
+ </div>

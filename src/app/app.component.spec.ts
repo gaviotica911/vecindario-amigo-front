@@ -2,7 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { VecinoListComponent } from './vecino/vecino-list/vecino-list.component';
+import { VecinoListComponent } from './modules/vecino/vecino-list/vecino-list.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {

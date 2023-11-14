@@ -1,6 +1,6 @@
 import { Negocio } from "app/modules/negocios/negocios";
-import { Vecino } from "app/vecino/vecino";
-import { ZonaVerde } from "app/zonaVerde/zonaVerde";
+import { Vecino } from "app/modules/vecino/vecino";
+import { ZonaVerde } from "app/modules/zonaVerde/zonaVerde";
 import { CentroComercial } from "app/centroComercial/centroComercial";
 
 export class Vecindario {

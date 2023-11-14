@@ -1,5 +1,51 @@
 <!-- navigation bar to start -->
-<app-navBar></app-navBar>
+
+
+
+
+<!-- Carga de scripts de Bootstrap y Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.min.js"></script>
+
+<nav class="navbar navbar-dark bg-dark border-bottom border-body navbar-expand-lg" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://em-content.zobj.net/source/apple/354/house-with-garden_1f3e1.png" alt="Logo" width="35" height="29" class="d-inline-block align-text-top">
+      Vecindario Amigo
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link active" aria-current="page" href="#">Neighborhoods</a>
+
+        <!-- Vecinos Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Vecinos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/vecinos/list">List</a></li>
+            <li><a class="dropdown-item" href="/vecinos/create">Create</a></li>
+          </ul>
+        </li>
+        
+        <!-- Resto de enlaces -->
+        <a class="nav-link" href="#">Shopping Malls</a>
+        <a class="nav-link" href="#">Businesses</a>
+        <a class="nav-link" href="#">Interest Groups</a>
+        <a class="nav-link" href="#">Green Zones</a>
+      </div>
+    </div>
+  </div>
+  
+</nav>
+
+
+
 
 <!-- section of views -->
 <div class="container mt-5 p-5">

@@ -1,5 +1,5 @@
 import { GrupoDeInteres } from "./grupoDeInteres";
-import { Vecino } from "../vecino/vecino";
+import { Vecino } from "../modules/vecino/vecino";
 
 
 export class GrupoDeInteresDetail extends GrupoDeInteres {

@@ -16,12 +16,14 @@ export class ZonaVerdeListComponent implements OnInit {
   constructor(private zonaVerdeService: ZonaVerdeService) { }
 
   getZonasVerdes(): void{
-    this.zonaVerdeService.getZonasVerdes().subscribe((zonasVerdes) => {
+    this.zonaVerdeService.getZonaVerdes().subscribe((zonasVerdes) => {
       this.zonasVerdes = zonasVerdes;
+     
   });
   }
 
-  ngOnInit() {
+  ngOnInit():void {
+    this.getZonasVerdes();
   }
 
 }

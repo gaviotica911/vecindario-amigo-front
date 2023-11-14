@@ -1,4 +1,4 @@
-import {Vecindario} from '../modules/vecindarios/vecindario';
+import {Vecindario} from '../vecindarios/vecindario';
 
 export class Vecino {
     ID: number;

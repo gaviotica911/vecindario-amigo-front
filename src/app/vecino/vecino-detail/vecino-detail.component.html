@@ -23,9 +23,22 @@
         <dt class="bold">Description</dt>
         <dd>{{ vecinoDetail.descripcion }}</dd>
         <dt>Publicaciones</dt>
-<dd class="caption" *ngFor="let post of vecinoDetail.publicaciones">
- {{ post.contenido }}
-</dd>
+          <dd class="caption" *ngFor="let post of vecinoDetail.publicaciones">
+            <div class="card p-2" style="width: 15rem; height: 33rem">
+              <img
+                class="card-img-top"
+                src="{{ post.foto }}"
+                alt="{{ post.contenido }}"  
+               
+              />
+              <div class="card-body">
+                <h5 class="card-title">{{ post.fecha }}</h5>
+                <p class="card-text">{{ post.contenido }}</p>
+                <p class="card-text">Likes: {{ post.likes }}</p>
+                <p class="card-text">Shares: {{ post.compartidos }}</p>
+              </div>
+           </div>
+          </dd>
 
       </dl>
     </div>

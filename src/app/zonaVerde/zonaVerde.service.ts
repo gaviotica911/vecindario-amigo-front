@@ -9,7 +9,7 @@ import{ZonaVerde} from './zonaVerde';
   providedIn: 'root'
 })
 export class ZonaVerdeService {
-  private apiUrl: string=environment.baseUrl+'zonasVerdes';
+  private apiUrl: string=environment.baseUrl+'zonas_verdes';
 
 constructor(private http: HttpClient) { }
 

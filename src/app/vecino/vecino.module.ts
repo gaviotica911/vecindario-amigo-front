@@ -2,15 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VecinoListComponent } from './vecino-list/vecino-list.component';
 import { VecinoDetailComponent } from './vecino-detail/vecino-detail.component';
-import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { vecinoComponent } from './vecino.component';
+
 
 
 @NgModule({
   imports: [
-    CommonModule, RouterModule,ReactiveFormsModule
-
-
+    CommonModule
   ],
   declarations: [VecinoListComponent, VecinoDetailComponent, vecinoComponent],
   exports: [VecinoListComponent, vecinoComponent]

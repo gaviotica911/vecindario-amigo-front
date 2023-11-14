@@ -1,5 +1,5 @@
 <div *ngIf="selected">
-  <!-- <app-grupoDeInteres-list [grupoDeInteresDetail]="selectedGrupoDeInteres"></app-grupoDeInteres-list>  -->
+  <app-grupoDeInteres-detail [grupoDeInteresDetail]="selectedGrupoDeInteres"></app-grupoDeInteres-detail>
 </div>
 
 <hr />
@@ -10,7 +10,6 @@
       <div class="card p-2" style="width: 15rem; height: 33rem">
         <img
           class="card-img-top"
-          src="{{ book.image }}"
           alt="{{ book.nombre }}"
           (click)="onSelected(book)"
         />

@@ -16,4 +16,8 @@ export class GrupoDeInteresService {
     getGruposDeInteres(): Observable<GrupoDeInteresDetail[]> {
         return this.http.get<GrupoDeInteresDetail[]>(this.apiUrl);
       }
+
+    getGrupoDeInteres(id: string): Observable<GrupoDeInteresDetail> {
+        return this.http.get<GrupoDeInteresDetail>(this.apiUrl + "/" + id);
+      }
 }

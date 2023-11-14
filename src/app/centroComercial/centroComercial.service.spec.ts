@@ -1,3 +1,4 @@
+/* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { CentroComercialService } from './centroComercial.service';
@@ -8,9 +9,10 @@ describe('Service: CentroComercial', () => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [CentroComercialService]
+    });
   });
 
-  it('should create the service', inject([CentroComercialService], (service: CentroComercialService) => {
+  it('should be created', inject([CentroComercialService], (service: CentroComercialService) => {
     expect(service).toBeTruthy();
   }));
 });

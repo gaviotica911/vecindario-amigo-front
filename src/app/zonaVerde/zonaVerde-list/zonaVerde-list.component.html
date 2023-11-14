@@ -1,3 +1,17 @@
-<p>
-  zonaVerde-list works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col mb-2" *ngFor="let zona of zonasVerdes">
+          <div class="card p-2" style="width: 15rem; height: 33rem">
+              
+              <div class="card-body">
+                <h5 class="card-title">{{ zona.nombre }}</h5>
+                <p class="card-text">Descripcion: {{ zona.descripcion }}</p>
+                <p class="card-text">Ubicación: {{ zona.ubicacion }}</p>
+                <p class="card-text">Preferencias: {{ zona.preferencias }}</p>
+                <p class="card-text">Calificación: {{ zona.calificacion }}</p>
+                 <!-- <p class="card-text">[{{ vecino.editorial.name }}]</p> -->
+              </div>
+           </div>
+      </div>
+   </div>
+</div>

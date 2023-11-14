@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CentroComercial } from '../centro-comercial'; // Assuming the correct path to CentroComercial class
-import { CentroComercialService } from '../centro-comercial.service'; // Assuming the correct path to CentroComercialService
+import { CentroComercial } from '../centroComercial';
+import { CentroComercialService } from '../centroComercial.service';
 
 @Component({
-  selector: 'app-centro-comercial-list',
+  selector: 'app-centroComercial-list', 
   templateUrl: './centro-comercial-list.component.html',
   styleUrls: ['./centro-comercial-list.component.css']
 })
@@ -14,6 +14,7 @@ export class CentroComercialListComponent implements OnInit {
 
   getCentrosComerciales(): void {
     this.centroComercialService.getCentrosComerciales().subscribe((centrosComerciales) => {
+      // Corrected variable name here
       this.centrosComerciales = centrosComerciales;
     });
   }

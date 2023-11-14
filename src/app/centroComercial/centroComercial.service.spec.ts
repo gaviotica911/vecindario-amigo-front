@@ -1,6 +1,6 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { CentroComercialService } from './centro-comercial.service';
+import { CentroComercialService } from './centroComercial.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 describe('Service: CentroComercial', () => {

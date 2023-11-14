@@ -9,6 +9,7 @@ import { VecinoModule } from './vecino/vecino.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavBarModule } from './modules/navBar/navBar.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { VecindariosModule } from './modules/vecindarios/vecindarios.module';
 import { ZonaVerdeModule } from './zonaVerde/zonaVerde.module';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ZonaVerdeModule } from './zonaVerde/zonaVerde.module';
     GrupoDeInteresModule,
     VecinoModule,
     HttpClientModule,
+    VecindariosModule,
     ZonaVerdeModule
   ],
   providers: [],

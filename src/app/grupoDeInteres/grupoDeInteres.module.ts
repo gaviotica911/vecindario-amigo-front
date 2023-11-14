@@ -5,6 +5,7 @@ import { GrupoDeInteresDetailComponent } from './grupoDeInteres-detail/grupoDeIn
 import { GrupoDeInteresRoutingModule } from './grupoDeInteres-routing.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GrupoDeInteresComponent } from './grupoDeInteres.component';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     GrupoDeInteresRoutingModule,
     ReactiveFormsModule
   ],
-  exports: [GrupoDeInteresListComponent],
-  declarations: [GrupoDeInteresListComponent, GrupoDeInteresDetailComponent]
+  exports: [GrupoDeInteresListComponent, GrupoDeInteresComponent],
+  declarations: [GrupoDeInteresListComponent, GrupoDeInteresDetailComponent, GrupoDeInteresComponent]
 })
 export class GrupoDeInteresModule { }

@@ -1,0 +1,49 @@
+.card.shadow-sm.text-white {
+    background-color: rgb(18, 18, 26);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .card-body {
+    font-family: 'Arial', sans-serif;
+    color: #E0E0E0;
+  }
+  
+  .card-title {
+    font-size: 1.75em;
+    margin-bottom: 0.5em;
+  }
+  
+  .card-body p {
+    font-size: 1.1em;
+  }
+  
+  .btn {
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .btn:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+  }
+  

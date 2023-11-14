@@ -15,12 +15,17 @@ export class GrupoDeInteresListComponent implements OnInit {
   gruposDeInteres: Array<GrupoDeInteresDetail> = [];
   selected: Boolean = false;
   selectedGrupoDeInteres!: GrupoDeInteresDetail;
+  mostrarListaFlag: boolean = false;
+
   constructor(private grupoDeInteresService: GrupoDeInteresService) { }
 
   getGruposDeInteres(): void {
     this.grupoDeInteresService.getGruposDeInteres().subscribe((gruposDeInteres) => {
       this.gruposDeInteres = gruposDeInteres;
     });
+  }
+  mostrarLista() {
+    this.mostrarListaFlag = true;
   }
 
   onSelected(grupoDeInteres: GrupoDeInteresDetail): void {

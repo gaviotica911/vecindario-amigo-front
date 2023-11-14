@@ -20,4 +20,6 @@ export class GrupoDeInteresService {
     getGrupoDeInteres(id: string): Observable<GrupoDeInteresDetail> {
         return this.http.get<GrupoDeInteresDetail>(this.apiUrl + "/" + id);
       }
+
+    
 }

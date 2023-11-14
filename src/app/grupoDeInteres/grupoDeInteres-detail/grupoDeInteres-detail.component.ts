@@ -12,7 +12,7 @@ import { GrupoDeInteres } from '../grupoDeInteres';
 export class GrupoDeInteresDetailComponent implements OnInit {
 
   grupoDeInteresId!: string;
-  @Input() grupoDeInteresDetail!: GrupoDeInteres;
+  @Input() grupoDeInteresDetail!: GrupoDeInteresDetail;
 
   constructor(
     private route: ActivatedRoute,

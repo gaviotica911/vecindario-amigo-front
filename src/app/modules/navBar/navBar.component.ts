@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navBar.component.css']
 })
 export class NavBarComponent implements OnInit {
+  displayGruposList: boolean = false;
 
   constructor() { }
-
+  showVecindariosList(): void {
+    this.displayGruposList = true;
+  }
   ngOnInit() {
   }
 

@@ -14,7 +14,7 @@ export class GrupoDeInteresListComponent implements OnInit {
   
   gruposDeInteres: Array<GrupoDeInteresDetail> = [];
   selected: Boolean = false;
-  selectedBook!: GrupoDeInteresDetail;
+  selectedGrupoDeInteres!: GrupoDeInteresDetail;
   constructor(private grupoDeInteresService: GrupoDeInteresService) { }
 
   getGruposDeInteres(): void {
@@ -25,7 +25,7 @@ export class GrupoDeInteresListComponent implements OnInit {
 
   onSelected(grupoDeInteres: GrupoDeInteresDetail): void {
     this.selected = true;
-    this.selectedBook = grupoDeInteres;
+    this.selectedGrupoDeInteres = grupoDeInteres;
   }
   ngOnInit() {
     this.getGruposDeInteres();

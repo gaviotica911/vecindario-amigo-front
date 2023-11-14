@@ -1,3 +1,9 @@
+<div *ngIf="selected">
+  <app-vecindarios-detail [vecindarioDetail]="selectedVecindario"></app-vecindarios-detail>
+ </div>
+ 
+ <hr />
+
 <div class="container-fluid">
   <div class="card text-white bg-dark mb-3">
     <div class="card-body">
@@ -11,7 +17,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let vecindario of vecindarios">
-            <td>{{ vecindario.nombre }}</td>
+            <td (click)="onSelected(vecindario)">{{ vecindario.nombre }}</td>
             <td>{{ vecindario.ciudad }}</td>
             <td>{{ vecindario.localidad }}</td>
           </tr>

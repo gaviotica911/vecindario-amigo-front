@@ -3,20 +3,21 @@
 </div>
 
 <hr />
-
 <div class="container-fluid">
-  <div class="row">
-    <div *ngFor="let book of gruposDeInteres" class="col mb-2">
-      <div class="card p-2" style="width: 15rem; height: 33rem">
-        <img
-          class="card-img-top"
-          alt="{{ book.nombre }}"
-          (click)="onSelected(book)"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ book.nombre }}</h5>
-        </div>
-      </div>
+  <div class="card text-white bg-dark mb-3">
+    <div class="card-body">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let grupo of gruposDeInteres" (click)="onSelected(grupo)">
+            <td>{{ grupo.nombre }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

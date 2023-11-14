@@ -1,16 +1,25 @@
-
+<!-- navigation bar to start -->
 <app-navBar></app-navBar>
-<!-- Main Content Area -->
-<main class="mt-4">
-  <div class="container">
-    <app-zonaVerde-list></app-zonaVerde-list>
-    <router-outlet></router-outlet>
+
+<!-- section of views -->
+<div class="container mt-5 p-5">
+  <div class="row mt-3">
+    <!-- Columna izquierda para el contenido de vecindarios -->
+    <div class="col-md-6">
+      <!-- vecindarios list -->
+      <app-vecindarios></app-vecindarios>
+    </div>
+
+    <!-- Columna derecha para el contenido de zonas verdes -->
+    <div class="col-md-6">
+      <!-- Main Content Area -->
+      <main class="mt-4">
+        <app-zonaVerde-list></app-zonaVerde-list>
+        <router-outlet></router-outlet>
+      </main>
+    </div>
   </div>
+</div>
 
 
-  
-</main>
-
-<!-- vecindarios list -->
-<app-vecindarios-list></app-vecindarios-list>
 <app-footer></app-footer>

@@ -9,7 +9,7 @@ import { VecinoDetail } from '../vecino-detail';
   styleUrls: ['./vecino-list.component.css']
 })
 export class VecinoListComponent implements OnInit {
-  vecinos: Array<Vecino> = [];
+  vecinos: Array<VecinoDetail> = [];
   selectedVecino!: VecinoDetail;
   selected: Boolean = false;
 

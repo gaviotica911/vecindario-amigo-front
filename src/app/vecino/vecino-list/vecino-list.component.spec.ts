@@ -5,7 +5,7 @@ import { faker } from '@faker-js/faker';
 
 import { VecinoListComponent } from './vecino-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { Vecindario } from 'src/app/modules/vecindarios/vecindario';
+import { Vecindario } from 'app/modules/vecindarios/vecindario';
 import { Vecino } from '../vecino';
 import { VecinoService } from '../vecino.service';
 import { VecinoDetail } from '../vecino-detail';

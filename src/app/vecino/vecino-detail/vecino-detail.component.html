@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{ vecinoDetail.nombre }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ vecinoDetail.profilePic }}"
+          alt="{{ vecinoDetail.nombre }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Vecino</dt>
+        <dt>Edad</dt>
+        <dd>{{ vecinoDetail.edad }}</dd>
+        <hr />
+        <hr />
+        <dt class="bold">Vecindario</dt>
+        <dd class="caption">{{ vecinoDetail.vecindario.nombre }}</dd>
+        <hr />
+        <dt class="bold">Description</dt>
+        <dd>{{ vecinoDetail.descripcion }}</dd>
+        <dt>Publicaciones</dt>
+<dd class="caption" *ngFor="let post of vecinoDetail.publicaciones">
+ {{ post.contenido }}
+</dd>
+
+      </dl>
+    </div>
+  </div>
+ </div>

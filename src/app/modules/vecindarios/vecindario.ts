@@ -1,5 +1,6 @@
-import { Vecino } from "src/app/vecino/vecino";
-
+import { Negocio } from "app/negocio/negocio";
+import { Vecino } from "app/vecino/vecino";
+import { ZonaVerde } from "app/zonaVerde/zonaVerde";
 
 export class Vecindario {
     id: number;
@@ -7,9 +8,9 @@ export class Vecindario {
     ciudad: string;
     localidad: string;
     vecinos?: Vecino[];
-    //negocios?: Negocio[];
+    negocios?: Negocio[];
     //centrosComerciales?: CentroComercial[];
-    //zonasVerdes?: ZonaVerde[];
+    zonasVerdes?: ZonaVerde[];
 
     constructor(
         id: number,

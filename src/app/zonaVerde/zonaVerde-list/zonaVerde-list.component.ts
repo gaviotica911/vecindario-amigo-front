@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ZonaVerde } from '../zonaVerde';
+import { ZonaVerdeService } from '../zonaVerde.service';
+
+
 
 @Component({
   selector: 'app-zonaVerde-list',
@@ -7,7 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ZonaVerdeListComponent implements OnInit {
 
-  constructor() { }
+  zonasVerdes: Array<ZonaVerde>=[];
+
+  constructor(private zonaVerdeService: ZonaVerdeService) { }
+
+  getZonasVerdes(): void{
+    this.zonaVerdeService.getZonasVerdes().subscribe((zonasVerdes) => {
+      this.zonasVerdes = zonasVerdes;
+  });
+  }
 
   ngOnInit() {
   }

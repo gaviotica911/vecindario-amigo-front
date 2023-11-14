@@ -9,8 +9,15 @@ import { VecindariosService } from '../vecindarios.service';
 })
 export class VecindariosListComponent implements OnInit {
 
+  selected: Boolean = false;
+  selectedVecindario!: Vecindario;
   vecindarios: Array<Vecindario> = [];
   constructor(private VecindariosService: VecindariosService) { }
+
+  onSelected(vecindario: Vecindario): void {
+    this.selected = true;
+    this.selectedVecindario = vecindario;
+  }
 
   getVecindarios(): void {
     this.VecindariosService.getVecindarios().subscribe((vecindarios) => {

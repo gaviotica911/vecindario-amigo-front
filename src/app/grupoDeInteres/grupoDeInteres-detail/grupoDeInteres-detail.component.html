@@ -9,14 +9,22 @@
         />
       </div>
     </div>
-    <div class="col">
+    <div class="col-md-7">
       <dl>
         <dt>Grupo De Interes</dt>
-        <dd>No available information</dd>
         <hr />
         <dt class="bold">Description</dt>
         <dd>{{ grupoDeInteresDetail.descripcion }}</dd>
       </dl>
+      <p class="h5">Miembros del grupo de interes:</p>
+        <ul>
+          <li
+            *ngFor="let vecino of grupoDeInteresDetail?.vecinos"
+            routerLink="/vecinos/{{ vecino.ID }}"
+          >
+            {{ vecino.nombre }}
+          </li>
+        </ul>
     </div>
   </div>
  </div>

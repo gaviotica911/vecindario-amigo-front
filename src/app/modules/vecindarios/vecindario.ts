@@ -1,4 +1,4 @@
-import { Negocio } from "app/modules/negocio/negocio";
+import { Negocio } from "app/modules/negocios/negocios";
 import { Vecino } from "app/vecino/vecino";
 import { ZonaVerde } from "app/zonaVerde/zonaVerde";
 
@@ -18,17 +18,17 @@ export class Vecindario {
         ciudad: string,
         localidad: string,
         vecinos?: Vecino[],
-        //negocios?: Negocio[],
+        negocios?: Negocio[],
         //centrosComerciales?: CentroComercial[],
-        //zonasVerdes?: ZonaVerde[]
+        zonasVerdes?: ZonaVerde[]
     ) {
         this.id = id;
         this.nombre = nombre;
         this.ciudad = ciudad;
         this.localidad = localidad;
         this.vecinos = vecinos || [];
-        //this.negocios = negocios || [];
+        this.negocios = negocios || [];
         //this.centrosComerciales = centrosComerciales || [];
-        //this.zonasVerdes = zonasVerdes || [];
+        this.zonasVerdes = zonasVerdes || [];
     }
 }

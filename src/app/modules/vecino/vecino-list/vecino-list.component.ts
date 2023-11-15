@@ -18,6 +18,8 @@ export class VecinoListComponent implements OnInit {
     this.selectedVecino = vecino;
   }
 
+  
+
  
   constructor(private vecinoService: VecinoService) { }
 

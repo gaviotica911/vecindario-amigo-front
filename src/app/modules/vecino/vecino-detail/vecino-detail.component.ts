@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Vecino } from '../vecino';
 import { VecinoDetail } from '../vecino-detail';
-import { PublicacionDetail } from 'app/modules/publicacion/publicacion-detail';
+import { PublicacionDetail } from '../../publicacion/publicacion-detail';
 
 @Component({
   selector: 'app-vecino-detail',

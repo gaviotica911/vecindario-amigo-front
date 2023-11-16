@@ -1,7 +1,7 @@
-import { Negocio } from "app/modules/negocios/negocios";
-import { Vecino } from "app/modules/vecino/vecino";
-import { ZonaVerde } from "app/modules/zonaVerde/zonaVerde";
-import { CentroComercial } from "app/centroComercial/centroComercial";
+import { Negocio } from "../negocios/negocios";
+import { Vecino } from "../vecino/vecino";
+import { ZonaVerde } from "../zonaVerde/zonaVerde";
+import { CentroComercial } from "../../centroComercial/centroComercial";
 
 export class Vecindario {
     id: number;

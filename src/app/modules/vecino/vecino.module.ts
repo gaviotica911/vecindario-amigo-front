@@ -4,15 +4,18 @@ import { VecinoListComponent } from './vecino-list/vecino-list.component';
 import { VecinoDetailComponent } from './vecino-detail/vecino-detail.component';
 import { vecinoComponent } from './vecino.component';
 
+import { ComentarioModule } from "../comentario/comentario.module";
+import { Publicacion } from '../publicacion/publicacion';
 import { PublicacionModule } from '../publicacion/publicacion.module';
 
 
 
 @NgModule({
-  imports: [
-    CommonModule, PublicacionModule
-  ],
-  declarations: [VecinoListComponent, VecinoDetailComponent, vecinoComponent],
-  exports: [VecinoListComponent, vecinoComponent]
+    declarations: [VecinoListComponent, VecinoDetailComponent, vecinoComponent],
+    exports: [VecinoListComponent, vecinoComponent],
+    imports: [
+        CommonModule, 
+        ComentarioModule,PublicacionModule
+    ]
 })
 export class VecinoModule { }

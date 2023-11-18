@@ -1,3 +1,5 @@
+import { Vecino } from "../vecino/vecino";
+
 export class Publicacion {
 
     id: number;
@@ -7,8 +9,10 @@ export class Publicacion {
     video: string;
     likes: number;
     compartidos: number;
+    vecino:Vecino;
+    
 
-    constructor(id: number, contenido: string, fecha: any, foto: string, video: string, likes: number, compartidos: number) {   
+    constructor(id: number, contenido: string, fecha: any, foto: string, video: string, likes: number, compartidos: number, vecino:Vecino) {   
         this.id = id;
         this.contenido = contenido;
         this.fecha = fecha;
@@ -16,5 +20,6 @@ export class Publicacion {
         this.video = video;
         this.likes = likes;
         this.compartidos = compartidos;
+        this.vecino = vecino;
     }
 }

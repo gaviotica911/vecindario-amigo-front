@@ -12,8 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { VecindariosModule } from './modules/vecindarios/vecindarios.module';
 import { ZonaVerdeModule } from './modules/zonaVerde/zonaVerde.module';
 import { ComentarioModule } from './modules/comentario/comentario.module';
-
 import { PublicacionModule } from './modules/publicacion/publicacion.module';
+
+
 
 @NgModule({
   declarations: [		
@@ -31,7 +32,8 @@ import { PublicacionModule } from './modules/publicacion/publicacion.module';
     VecindariosModule,
     ZonaVerdeModule,
     ComentarioModule, 
-    PublicacionModule
+ PublicacionModule,
+    ComentarioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

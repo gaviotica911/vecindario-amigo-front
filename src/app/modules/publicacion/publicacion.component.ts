@@ -1,36 +1,30 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { Publicacion } from './publicacion';
-import { PublicacionService } from './publicacion.service';
-import { PublicacionDetail } from './publicacion-detail';
-
+import {  PublicacionService } from './publicacion.service';
+import { Publicacion } from '../publicacion/publicacion';
+import { VecinoDetail } from '../vecino/vecino-detail';
 @Component({
   selector: 'app-publicacion',
   templateUrl: './publicacion.component.html',
   styleUrls: ['./publicacion.component.css']
 })
 export class PublicacionComponent implements OnInit {
-  Publicacions: Array<PublicacionDetail> = [];
-  selectedPublicacion!: PublicacionDetail;
+
+  constructor(private publicacionService :PublicacionService) { }
+  posts: Array<Publicacion> = [];
+  selectedPost!: Publicacion;
   selected: Boolean = false;
 
-  onSelected(Publicacion: PublicacionDetail): void {
+  onSelected(post: Publicacion): void {
     this.selected = true;
-    this.selectedPublicacion = Publicacion;
+    this.selectedPost = post;
+   
   }
-  @Input() publicacionDetail!: PublicacionDetail;
-
- 
-  constructor(private PublicacionService: PublicacionService) { }
-
-  getPublicacions(): void{
-    this.PublicacionService.getPublicacions().subscribe((Publicacions) => {
-      this.Publicacions = Publicacions;
-    });
+  selectedPublicacion(publicacion: Publicacion){
+    this.publicacionService.selectPublicacion(publicacion);
   }
-
+  @Input() vecinoDetail!: VecinoDetail;
 
   ngOnInit() {
-    this.getPublicacions();
   }
 
 }

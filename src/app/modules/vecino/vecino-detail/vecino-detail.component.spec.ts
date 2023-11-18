@@ -9,7 +9,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Vecindario } from '../../vecindarios/vecindario';
 import { faker } from '@faker-js/faker';
 import { VecinoDetail } from '../vecino-detail';
-import { PublicacionDetail } from '../../publicacion/publicacion-detail';
+import { Publicacion} from '../../publicacion/publicacion';
+import { Vecino } from '../vecino';
 
 describe('VecinoDetailComponent', () => {
   let component: VecinoDetailComponent;
@@ -36,9 +37,18 @@ describe('VecinoDetailComponent', () => {
       faker.lorem.sentence(),
       faker.lorem.sentence()
     );
+
+    let vecino= new Vecino(
+      faker.datatype.number(),
+      faker.lorem.sentence(),
+      faker.datatype.number(),
+      faker.lorem.sentence(),
+      faker.image.imageUrl(),
+      vecindario
+    );
     let posts = Array(publicacionesSize);
     for (let i = 0; i < publicacionesSize; i++) {
-      posts[i] = new PublicacionDetail(
+      posts[i] = new Publicacion(
         faker.datatype.number(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
@@ -46,7 +56,7 @@ describe('VecinoDetailComponent', () => {
         faker.lorem.sentence(),
         faker.datatype.number(),
         faker.datatype.number(),
-        []
+        vecino
       );
     }
 

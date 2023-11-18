@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
+import { Publicacion } from './publicacion';
 
-import {environment} from '../../../environments/environment';
-import { Observable } from 'rxjs';
-import { Publicacion } from './publicacion';  
-import { PublicacionDetail } from './publicacion-detail';
 @Injectable({
   providedIn: 'root'
 })
 export class PublicacionService {
-  private apiUrl = environment.baseUrl + 'publicaciones';
+  private selectedPublicacion= new BehaviorSubject<Publicacion | null>(null );
 
-constructor(private http: HttpClient) { }
+  selectedPublicacion$=this.selectedPublicacion.asObservable();
 
-getPublicacions(): Observable<PublicacionDetail[]>{
-  return this.http.get<PublicacionDetail[]>(this.apiUrl);
-}
+  selectPublicacion(publicacion: Publicacion){
+    this.selectedPublicacion.next(publicacion);
+  }
+
+constructor() { }
 
 }

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Vecino } from '../vecino';
 import { VecinoDetail } from '../vecino-detail';
-import { PublicacionDetail } from '../../publicacion/publicacion-detail';
+import { Publicacion } from '../../publicacion/publicacion';
 
 @Component({
   selector: 'app-vecino-detail',
@@ -9,15 +9,16 @@ import { PublicacionDetail } from '../../publicacion/publicacion-detail';
   styleUrls: ['./vecino-detail.component.css']
 })
 export class VecinoDetailComponent implements OnInit {
-  posts: Array<PublicacionDetail> = [];
-  selectedPost!: PublicacionDetail;
+  
+  vecinos: Array<VecinoDetail> = [];
+  selectedVecino!: VecinoDetail;
   selected: Boolean = false;
 
-  onSelected(post: PublicacionDetail): void {
+  onSelected(vecino: VecinoDetail): void {
     this.selected = true;
-    this.selectedPost = post;
+    this.selectedVecino = vecino;
+    console.log('Vecino seleccionado:', this.selectedVecino); // Para verificar la selección
   }
-
   
   @Input() vecinoDetail!: VecinoDetail;
 

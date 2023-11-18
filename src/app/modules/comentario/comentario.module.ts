@@ -6,6 +6,7 @@ import { ComentarioComponent } from './comentario.component';
   imports: [
     CommonModule
   ],
-  declarations: [ComentarioComponent]
+  declarations: [ComentarioComponent],
+  exports: [ComentarioComponent]
 })
 export class ComentarioModule { }

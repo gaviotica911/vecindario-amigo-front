@@ -5,7 +5,7 @@ body h1{
   padding: 0;
   font-weight: bold;
   font-size: 50px;
-
+padding: 10px;
 }
 body h2{
   font-family: 'Libre Baskerville', serif; /* Fuente */
@@ -34,19 +34,62 @@ body {
   background-size: cover;
 }
 
-.container{
+
+#titulo{
   display: flex;
   align-items: stretch; /* Alinea los contenedores verticalmente */
   padding-top: 120px;
-  padding-left: 910px;
+  padding-left: 1080px;
 }
-.container1{
+#slogan {
   display: flex;
   align-items: stretch; /* Alinea los contenedores verticalmente */
   padding-top: 20px;
   padding-left: 1080px;
  
 }
+
+/* Estilos Generales de la Navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0); /* Fondo completamente transparente */
+ padding: 20px;
+}
+
+/* Título de la Navbar */
+.navbar-brand h1 {
+  color: black; /* Color de letra */
+  font-family: 'Libre Baskerville'; /* Estilo de fuente */
+  font-weight: bold; /* Letra más gruesa */
+  font-size: 120%; /* Tamaño de la letra */
+}
+
+/* Enlaces de la Navbar */
+.navbar-nav .nav-link {
+  font-size: 1.2rem; /* Tamaño de la letra */
+  margin-right: 20px; /* Espacio a la derecha de cada enlace */
+  color: black; /* Color de letra */
+  font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
+}
+
+/* Enlace Activo de la Navbar */
+.navbar-nav .nav-link.active {
+  font-weight: bold; /* Letra más gruesa para el enlace activo */
+  color: #737373; /* Color para el enlace activo */
+}
+
+/* Botón de la Navbar para móviles */
+.navbar-toggler {
+  border-color: transparent; /* Borde transparente para el botón */
+}
+
+.logo{
+  width: 40px; /* o el tamaño que prefieras */
+  height: 40px; /* igual al ancho para mantener la forma de círculo */
+  border-radius: 50%; /* esto hace que la imagen sea redonda */
+  object-fit: cover; /* asegura que la imagen se ajuste bien */
+  margin-right: 10px; /* espacio entre la imagen y el texto */
+}
+
 
 
 

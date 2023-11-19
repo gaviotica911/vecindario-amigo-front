@@ -12,6 +12,7 @@ import { VecindariosModule } from './modules/vecindarios/vecindarios.module';
 import { ZonaVerdeModule } from './modules/zonaVerde/zonaVerde.module';
 import { ComentarioModule } from './modules/comentario/comentario.module';
 import { PublicacionModule } from './modules/publicacion/publicacion.module';
+import { ZonaVerdeRoutingModule } from './modules/zonaVerde/zonaVerde.routing';
 
 
 
@@ -32,7 +33,8 @@ import { PublicacionModule } from './modules/publicacion/publicacion.module';
     ZonaVerdeModule,
     ComentarioModule, 
  PublicacionModule,
-    ComentarioModule
+    ComentarioModule,
+    ZonaVerdeRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

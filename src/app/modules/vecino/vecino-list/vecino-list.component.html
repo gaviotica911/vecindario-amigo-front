@@ -4,23 +4,16 @@
  
  <hr />
  
-<div class="container-fluid">
-  <div class="row">
-    <div *ngFor="let vecino of vecinos" class="col mb-2">
-          <div class="card p-2" style="width: 15rem; height: 33rem">
-              <img
-                class="card-img-top"
-                src="{{ vecino.profilePic }}"
-                alt="{{ vecino.nombre }}"  
-                (click)="onSelected(vecino)"
-              />
-              <div class="card-body">
-                <h5 class="card-title">{{ vecino.nombre }}</h5>
-                <p class="card-text">Edad: {{ vecino.edad }}</p>
-                <p class="card-text">Descripcion: {{ vecino.descripcion }}</p>
-                <p class="card-text">Vecindario: [{{ vecino.vecindario.nombre }}]</p>
-              </div>
-           </div>
-      </div>
-   </div>
-</div>
+
+ <div class="container-fluid" id="zona">
+  <div class="container-fluid" id="lista">
+     <div *ngFor="let vecino of vecinos" class="col mb-2">
+      <ul class="list-group">
+        <li class="list-group-item">{{ vecino.nombre }}</li>
+       
+      </ul>
+           
+       </div>
+       </div>
+ 
+ </div>

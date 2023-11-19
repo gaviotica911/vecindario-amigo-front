@@ -1,16 +1,25 @@
 /* General Styles */
-body {
-  font-family: 'Arial', sans-serif;
+body h1{
+  font-family: 'League Spartan', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  font-weight: bold;
+  font-size: 50px;
+
+}
+body h2{
+  font-family: 'Libre Baskerville', serif; /* Fuente */
+    font-style: italic; /* Estilo de fuente cursiva */
+    margin-top: 5px; /* Espacio desde el h1 */
+    font-size: 20px;
+    text-align: center;
+    
+  
 }
 
+
 /* Navigation Bar Styles */
-.navbar {
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
-}
+
 
 /* Main Content Styles */
 main {
@@ -18,17 +27,26 @@ main {
   min-height: 80vh; /* Adjust height based on your content */
 }
 
-/* Footer Styles */
-.footer {
-  padding: 20px 0;
-  background-color: #0d0d0d;
-  color: white;
-  box-shadow: 0 -2px 4px rgba(0,0,0,.1);
+body {
+  background-image: url(../assets/image.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar {
-    margin-bottom: 10px;
-  }
+.container{
+  display: flex;
+  align-items: stretch; /* Alinea los contenedores verticalmente */
+  padding-top: 120px;
+  padding-left: 910px;
 }
+.container1{
+  display: flex;
+  align-items: stretch; /* Alinea los contenedores verticalmente */
+  padding-top: 20px;
+  padding-left: 1080px;
+ 
+}
+
+
+

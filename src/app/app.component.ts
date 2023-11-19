@@ -22,6 +22,10 @@ export class AppComponent {
           this.title = 'Vecinos';
           this.showSlogan = false;
         }
+        else if (event.url === '/gruposDeInteres') {
+          this.title = 'Grupos de interes';
+          this.showSlogan = false;
+        }
         else {
           this.title = 'Vecindario Amigo';
           this.showSlogan = true;

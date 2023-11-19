@@ -5,12 +5,15 @@ import { ZonaVerdeListComponent } from './modules/zonaVerde/zonaVerde-list/zonaV
 import { AppComponent } from './app.component';
 import { VecindariosComponent } from './modules/vecindarios/vecindarios.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { GrupoDeInteresListComponent } from './grupoDeInteres/grupoDeInteres-list/grupoDeInteres-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: 'inicio', component: InicioComponent },
   { path: 'vecinos', component: VecinoListComponent },
-  {  path: 'zonasVerdes', component: ZonaVerdeListComponent },
+  { path: 'zonasVerdes', component: ZonaVerdeListComponent },
+  { path: 'gruposDeInteres', component: GrupoDeInteresListComponent},
+
   // otras rutas...
 ];
 

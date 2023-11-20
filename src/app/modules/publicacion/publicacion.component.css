@@ -1,0 +1,43 @@
+#profilePic {
+    width: 30%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; 
+  }
+
+  .card-body {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    font-family: 'Libre Baskerville';
+  }
+  .list-group{
+    font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
+    padding: 10px;
+
+  }
+
+
+  
+  #profilePic {
+    /* Tus estilos existentes para profilePic */
+    margin-right: 10px; /* Añade margen a la derecha */
+  }
+  .list-group-item {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el texto con los iconos */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  }
+  
+  .list-group-item svg {
+    margin-right: 5px; /* Añade un poco de espacio entre el icono y el texto */
+  }
+  
+  .post-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .comment-container {
+    flex: 1; /* Ocupa el espacio restante */
+    /* Agrega más estilos si es necesario */
+  }
+  

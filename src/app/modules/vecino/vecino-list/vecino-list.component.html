@@ -1,19 +1,32 @@
-<div *ngIf="selected">
-  <app-vecino-detail [vecinoDetail]="selectedVecino"></app-vecino-detail>
- </div>
- 
- <hr />
- 
+<div class="container-fluid" id="main-container">
+  <div *ngIf="selected" class="detail-container">
+    <app-vecino-detail [vecinoDetail]="selectedVecino"></app-vecino-detail>
+  </div>
 
+
+
+  <div class="list-container">
  <div class="container-fluid" id="zona">
   <div class="container-fluid" id="lista">
-     <div *ngFor="let vecino of vecinos" class="col mb-2">
       <ul class="list-group">
-        <li class="list-group-item">{{ vecino.nombre }}</li>
-       
+
+        <div *ngFor="let vecino of vecinos" class="col mb-2">
+          <ul class="list-group">
+            <li class="list-group-item">
+             <img
+                class="comment-image"
+                src="{{ vecino.profilePic }}"
+                alt="{{ vecino.nombre }}"  
+                (click)="onSelected(vecino)"
+              />
+              {{ vecino.nombre }}
+            </li>
+          </ul>
+        </div>      
       </ul>
-           
-       </div>
-       </div>
- 
- </div>
+    </div>
+  </div>
+</div>
+</div>
+
+

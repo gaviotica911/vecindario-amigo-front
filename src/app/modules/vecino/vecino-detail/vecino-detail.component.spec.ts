@@ -67,7 +67,8 @@ describe('VecinoDetailComponent', () => {
         faker.lorem.sentence(),
         faker.image.imageUrl(),
         vecindario,
-        posts
+        posts,
+    []
       );
 
     fixture.detectChanges();

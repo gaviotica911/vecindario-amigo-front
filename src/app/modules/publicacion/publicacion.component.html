@@ -1,5 +1,7 @@
 
 
+<div class="post-and-comments-container">
+  <div class="vecino-detail-container">
         <dd class="caption" *ngFor="let post of vecinoDetail.publicaciones">
           <!-- Establece un tamaño fijo para la tarjeta -->
           <div class="card mb-3" style="max-width: 540px;">
@@ -9,37 +11,26 @@
                 <img
               class="card-img-top"
               src="{{ post.foto }}"
-              alt="{{ post.contenido }}"
+              
               style="height: 200px; object-fit: cover"
             />
        
               </div>
-              <div class="col-md-8">
-                <div class="card-body">
+            
                   <div class="col-md-8">
-                    <div class="card-body d-flex align-items-start">
-                      <!-- Imagen de perfil aquí -->
-                      <!-- Contenido aquí -->
-                   
-                  
-
-                  <img id="profilePic"
-                  class="comment-image"
-                  src="{{ post.vecino.profilePic }}"
-                  alt="{{ post.vecino.descripcion }}"  
-                />
-              
-                  <p class="card-text">{{post.contenido}}</p>
-              
-                  <p class="card-text" *ngFor="let grupo of vecinoDetail.gruposDeInteres"><small class="text-body-secondary">Fecha: {{post.fecha}}</small></p>
-                  
+                    <div class="card-body ">
+                     
+                      <p class="card-text"> {{post.contenido}}
+                      <br>
+                      Fecha: {{post.fecha}}
+                      </p>
+                      
+                      
                 </div>
               </div>
-                </div>
                 
-              </div>
-              
             </div>
+        
             <ul class="list-group">
               <li class="list-group-item d-flex align-items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-emoji-heart-eyes" viewBox="0 0 16 16">

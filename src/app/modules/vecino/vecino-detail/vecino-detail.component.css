@@ -8,9 +8,13 @@
   }
   
   .img-fluid {
-    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 50%; 
+    width: 150px; /* o el tamaño que prefieras */
+    height: 150px; /* igual al ancho para mantener la forma de círculo */
+    border-radius: 50%; /* esto hace que la imagen sea redonda */
+    object-fit: cover; /* asegura que la imagen se ajuste bien */
+    margin-right: 10px; /* espacio entre la imagen y el texto */
+    align-items: center; /* Centra verticalmente */
+  
   }
   
   #detail{

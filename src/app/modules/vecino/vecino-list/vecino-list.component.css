@@ -53,4 +53,11 @@ li{
       order: 0; /* Restablece el orden para dispositivos móviles */
     }
   }
+img {
+    width: 40px; /* o el tamaño que prefieras */
+    height: 40px; /* igual al ancho para mantener la forma de círculo */
+    border-radius: 50%; /* esto hace que la imagen sea redonda */
+    object-fit: cover; /* asegura que la imagen se ajuste bien */
+    margin-right: 10px; /* espacio entre la imagen y el texto */
+  }
   

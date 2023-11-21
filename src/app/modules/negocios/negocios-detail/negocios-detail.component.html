@@ -1,0 +1,36 @@
+
+<div class="card mb-3" id="detail" style="max-width: 540px    ">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+          class="img-fluid"
+          src="{{ negocioDetail.profilePic }}"
+          alt="{{ negocioDetail.nombre }}"
+        />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ negocioDetail.nombre }}</h5>
+        <p class="card-text">Descripcion: {{ negocioDetail.descripcion }}</p>
+        <p class="card-text">Vecindario: {{ negocioDetail.vecindario.nombre }}</p>
+        <p class="card-text"><small class="text-body-secondary">Grupos de interés: </small></p>
+      </div>
+    </div>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Publicaciones
+      <div class="buttons-container">
+        <button type="button" class="btn" (click)="onSelected(negocioDetail)" >Ver</button>
+        <button type="button" class="btn">Agregar</button>
+      </div>
+    </li>
+    
+    
+  </ul>
+
+<div *ngIf="selected">
+  <app-publicacion [negocioDetail]="selectedVecino">  </app-publicacion>
+</div>
+</div>
+

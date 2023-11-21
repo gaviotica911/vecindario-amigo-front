@@ -1,0 +1,47 @@
+.col-md-4 {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 50%; /* Opcional, dependiendo de cómo quieras manejar la altura */
+    flex: 0 0 30%; /* Aumenta el ancho del contenedor de la imagen */
+    max-width: 50%;
+  }
+  
+  .img-fluid {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; 
+  }
+  
+  #detail{
+    background-color: #AACFE9;
+  }
+
+  .card-body{
+    font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
+
+  }
+  .list-group{
+    font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
+    padding: 10px;
+
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    
+
+  }
+  
+  .buttons-container .btn {
+    color: #737373;
+    text-decoration: underline;
+    margin-left: 10px;
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre el texto y los botones */
+    align-items: center; /* Alinea verticalmente */
+  }

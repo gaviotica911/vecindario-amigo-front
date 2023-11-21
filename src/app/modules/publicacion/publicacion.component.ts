@@ -13,10 +13,12 @@ export class PublicacionComponent implements OnInit {
   posts: Array<Publicacion> = [];
   selectedPost!: Publicacion;
   selected: Boolean = false;
+  selectedPostId: number=0;
 
   onSelected(post: Publicacion): void {
     this.selected = true;
     this.selectedPost = post;
+    this.selectedPostId = post.id; // Su
    
   }
   selectedPublicacion(publicacion: Publicacion){

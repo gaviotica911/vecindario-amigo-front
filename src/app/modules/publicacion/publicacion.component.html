@@ -66,9 +66,11 @@
               
               
             </ul>
-            <div *ngIf="selected" class="comment-container">
-              <app-comentario [publicacion]="selectedPost"></app-comentario>
-            </div>
+           
             
           </div>
+          <div *ngIf="selectedPostId === post.id" class="comment-container">
+            <app-comentario [publicacion]="selectedPost"></app-comentario>
+          </div>
         </dd>
+        

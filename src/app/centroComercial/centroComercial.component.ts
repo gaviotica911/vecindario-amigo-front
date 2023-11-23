@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-centro-comercial',
-  templateUrl: './centro-comercial.component.html',
-  styleUrls: ['./centro-comercial.component.css']
+  selector: 'app-centroComercial',
+  templateUrl: './centroComercial.component.html',
+  styleUrls: ['./centroComercial.component.css']
 })
 export class CentroComercialComponent {
   displayCentroComercialList: boolean = false;

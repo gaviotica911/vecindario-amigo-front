@@ -26,6 +26,10 @@ export class AppComponent {
           this.title = 'Grupos de interes';
           this.showSlogan = false;
         }
+        else if (event.url === '/negocios') {
+          this.title = 'Negocios';
+          this.showSlogan = false;
+        }
         else {
           this.title = 'Vecindario Amigo';
           this.showSlogan = true;

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { VecindariosComponent } from './modules/vecindarios/vecindarios.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { GrupoDeInteresListComponent } from './grupoDeInteres/grupoDeInteres-list/grupoDeInteres-list.component';
+import { NegociosComponent } from './modules/negocios/negocios.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'vecinos', component: VecinoListComponent },
   { path: 'zonasVerdes', component: ZonaVerdeListComponent },
   { path: 'gruposDeInteres', component: GrupoDeInteresListComponent},
+  { path: 'negocios', component: NegociosComponent},
 
   // otras rutas...
 ];

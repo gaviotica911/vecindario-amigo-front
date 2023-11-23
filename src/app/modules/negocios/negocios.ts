@@ -9,6 +9,8 @@ export class Negocio {
     descripcion: string;
     profilePic: string;
     vecindario: Vecindario;
+    numeroDeTelefonico: number;
+    calificacion: number;
 
     
     
@@ -19,6 +21,8 @@ export class Negocio {
         nombre: string,
         descripcion: string,
         profilePic: string,
+        numeroDeTelefonico: number,
+        calificacion: number,
         vecindario: Vecindario,
         
     
@@ -30,6 +34,8 @@ export class Negocio {
         this.descripcion =descripcion;
         this.profilePic=profilePic;
         this.vecindario=vecindario;
+        this.numeroDeTelefonico=numeroDeTelefonico;
+        this.calificacion=calificacion
         
         
 }

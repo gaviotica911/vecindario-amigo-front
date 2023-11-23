@@ -2,6 +2,14 @@
   <app-grupoDeInteres-detail [grupoDeInteresDetail]="selectedGrupoDeInteres"></app-grupoDeInteres-detail>
 </div>
 
+<form>
+  <div class="form-group">
+    <label for="nombre">Grupo:</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su grupo" maxlength="50" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Filtrar</button>
+</form>
+
 <hr />
 <div class="container-fluid" id="zona">
   <div class="container-fluid" id="lista">

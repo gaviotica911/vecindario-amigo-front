@@ -1,4 +1,3 @@
-
 <div class="container mt-5">
   <div class="card shadow-sm text-white">
     <div class="card-body">
@@ -15,6 +14,7 @@
               <th>Calificación</th>
               <th>Ubicación</th>
               <th>Vecindario</th>
+              <th>Acciones</th> <!-- Add a new column for actions -->
             </tr>
           </thead>
           <tbody>
@@ -24,6 +24,9 @@
               <td>{{ centroComercial.calificacion }}</td>
               <td>{{ centroComercial.ubicacion }}</td>
               <td>{{ centroComercial.vecindario.nombre }}</td>
+              <td>
+                <button class="btn btn-primary">Ver detalle</button>
+              </td>
             </tr>
           </tbody>
         </table>

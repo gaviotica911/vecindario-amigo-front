@@ -10,6 +10,7 @@ import { CentroComercialService } from './centroComercial.service';
 export class CentroComercialComponent implements OnInit {
 
   centroComerciales: CentroComercial[] = [];
+  selectedCentroComercial: CentroComercial | null = null; // Add this line
 
   constructor(private centroComercialService: CentroComercialService) { }
 
@@ -24,6 +25,18 @@ export class CentroComercialComponent implements OnInit {
       },
       error => {
         console.error('Error fetching data:', error);
+      }
+    );
+  }
+
+  verDetalle(centroComercial: CentroComercial): void {
+    this.centroComercialService.getCentroComercialById(centroComercial.id).subscribe(
+      data => {
+        this.selectedCentroComercial = data;
+        console.log('Centro Comercial Details:', this.selectedCentroComercial);
+      },
+      error => {
+        console.error('Error fetching centroComercial details:', error);
       }
     );
   }

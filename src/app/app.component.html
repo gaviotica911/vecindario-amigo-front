@@ -50,16 +50,23 @@
     </nav>
   </div>
   
-
+  <!-- Main Router Outlet -->
+  <div class="container-fluid container-to-display" id="principal">
+    <div class="row">
+      <div class="col-md-12">
+        <div>
+          <div class="container-fluid" id="titulo">
+            <h1>{{ title }}</h1>
+          </div>
+          
+          <div class="container-fluid" id="slogan" *ngIf="showSlogan">
+              <h2>Conecta, Comparte, Cuida - Juntos Creamos Comunidad</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
   
-
-  <div class="container-fluid" id="titulo">
-    <h1>{{ title }}</h1>
-  </div>
-  
-  <div class="container-fluid" id="slogan" *ngIf="showSlogan">
-      <h2>Conecta, Comparte, Cuida - Juntos Creamos Comunidad</h2>
-  </div>
 
   <!-- Main Router Outlet -->
 <div class="container-fluid container-to-display" id="principal">

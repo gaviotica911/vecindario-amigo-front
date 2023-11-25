@@ -1,9 +1,10 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+
+import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
 import { CentroComercial } from './centroComercial';
-import { CentroComercialDetail } from './centro-comercial-detail';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,8 @@ export class CentroComercialService {
 
   constructor(private http: HttpClient) { }
 
-  getCentrosComerciales(): Observable<CentroComercialDetail[]> {
-    return this.http.get<CentroComercialDetail[]>(this.apiUrl);
+  getCentroComerciales(): Observable<CentroComercial[]> {
+    
+    return this.http.get<CentroComercial[]>(this.apiUrl);
   }
 }

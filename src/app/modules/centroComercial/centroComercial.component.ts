@@ -1,29 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CentroComercial } from './centroComercial';
+import { CentroComercialService } from './centroComercial.service';
 
 @Component({
-  selector: 'app-centroComercial',
+  selector: 'app-centro-comercial',
   templateUrl: './centroComercial.component.html',
   styleUrls: ['./centroComercial.component.css']
 })
-export class CentroComercialComponent {
-  displayCentroComercialList: boolean = false;
-  displayCentroComercialDetalle: boolean = false;
+export class CentroComercialComponent implements OnInit {
 
-  showCentroComercialList() {
-    this.displayCentroComercialList = true;
-    this.displayCentroComercialDetalle = false;
+  centroComerciales: CentroComercial[] = [];
+
+  constructor(private centroComercialService: CentroComercialService) { }
+
+  ngOnInit(): void {
+    this.fetchCentroComerciales();
   }
 
-  hideCentroComercialList() {
-    this.displayCentroComercialList = false;
-  }
-
-  showCentroComercialDetalle() {
-    this.displayCentroComercialDetalle = true;
-    this.displayCentroComercialList = false;
-  }
-
-  hideCentroComercialDetalle() {
-    this.displayCentroComercialDetalle = false;
+  private fetchCentroComerciales() {
+    this.centroComercialService.getCentroComerciales().subscribe(
+      data => {
+        this.centroComerciales = data;
+      },
+      error => {
+        console.error('Error fetching data:', error);
+      }
+    );
   }
 }

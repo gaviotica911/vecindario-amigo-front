@@ -51,13 +51,13 @@ body {
 
 /* Estilos Generales de la Navbar */
 .navbar {
-  background-color: rgba(0, 0, 0, 0); /* Fondo completamente transparente */
+  background-color: black; /* Fondo completamente transparente */
  padding: 20px;
 }
 
 /* Título de la Navbar */
 .navbar-brand h1 {
-  color: black; /* Color de letra */
+  color: white; /* Color de letra */
   font-family: 'Libre Baskerville'; /* Estilo de fuente */
   font-weight: bold; /* Letra más gruesa */
   font-size: 120%; /* Tamaño de la letra */
@@ -67,7 +67,7 @@ body {
 .navbar-nav .nav-link {
   font-size: 1.2rem; /* Tamaño de la letra */
   margin-right: 20px; /* Espacio a la derecha de cada enlace */
-  color: black; /* Color de letra */
+  color: white; /* Color de letra */
   font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
 }
 

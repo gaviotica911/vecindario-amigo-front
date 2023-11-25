@@ -25,6 +25,7 @@ export class PublicacionComponent implements OnInit {
     this.publicacionService.selectPublicacion(publicacion);
   }
   @Input() vecinoDetail!: VecinoDetail;
+  
 
   ngOnInit() {
   }

@@ -13,6 +13,7 @@ import { ZonaVerdeModule } from './modules/zonaVerde/zonaVerde.module';
 import { ComentarioModule } from './modules/comentario/comentario.module';
 import { PublicacionModule } from './modules/publicacion/publicacion.module';
 import { ZonaVerdeRoutingModule } from './modules/zonaVerde/zonaVerde.routing';
+import { NegocioModule } from './modules/negocios/negocios.module';
 
 
 
@@ -31,8 +32,9 @@ import { ZonaVerdeRoutingModule } from './modules/zonaVerde/zonaVerde.routing';
     HttpClientModule,
     VecindariosModule,
     ZonaVerdeModule,
+    NegocioModule,
     ComentarioModule, 
- PublicacionModule,
+    PublicacionModule,
     ComentarioModule,
     ZonaVerdeRoutingModule
   ],

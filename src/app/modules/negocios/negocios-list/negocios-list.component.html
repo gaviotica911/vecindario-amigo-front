@@ -6,10 +6,17 @@
 
   <div class="list-container">
     <div class="container-fluid" id="zona">
+      <div class="container-fluid" id="botones-ordenamiento">
+        <button (click)="ordenarAscendente()" class="btn btn-primary">Ordenar Ascendente</button>
+        <button (click)="ordenarDescendente()" class="btn btn-secondary">Ordenar Descendente</button>
+      </div>
+
       <div class="container-fluid" id="lista">
+        <button (click)="cambiarPagina(-1)" [disabled]="paginaActual === 1">Anterior</button>
+        <button (click)="cambiarPagina(1)" [disabled]="paginaActual === maximaPagina()">Siguiente</button>
+
         <ul class="list-group">
-          <!-- Lista de Negocios -->
-          <div *ngFor="let negocio of negocios" class="col mb-2">
+          <div *ngFor="let negocio of negociosPaginados" class="col mb-2">
             <ul class="list-group">
               <li class="list-group-item" (click)="onSelected(negocio)">
                 {{ negocio.nombre }} - Calificación: {{ negocio.calificacion }}

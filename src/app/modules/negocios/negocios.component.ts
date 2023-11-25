@@ -19,11 +19,11 @@ export class NegociosComponent implements OnInit {
     this.displayNegociosList = false;
   }
 
-  showNegociosDetalle(): void {
+  NegociosDetalleAscendete(): void {
     this.displayNegociosList = true;
   }
 
-  hideNegociosDetalle(): void {
+  NegociosDetalleDescendente(): void {
     this.displayNegociosList = false;
   }
 

@@ -1,4 +1,4 @@
-import { CentroComercial } from 'src/app/centroComercial/centroComercial';
+import { CentroComercial } from 'src/app/modules/centroComercial/centroComercial';
 import { Vecino } from '../vecino/vecino';
 import { Negocio } from '../negocios/negocios';
 import { Publicacion } from '../publicacion/publicacion';

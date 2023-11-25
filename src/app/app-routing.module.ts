@@ -12,6 +12,7 @@ import { NegociosComponent } from './modules/negocios/negocios.component';
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: 'inicio', component: InicioComponent },
+  { path: 'vecindarios', component: VecindariosComponent },
   {path: 'centrosComerciales',component: CentroComercialComponent},
   { path: 'vecinos', component: VecinoListComponent },
   { path: 'zonasVerdes', component: ZonaVerdeListComponent },

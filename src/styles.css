@@ -1,17 +1,29 @@
 /* Estilos globales y configuraciones de Flexbox */
-
-/* Configuración de Flexbox para el body */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
   
   /* Estilo para el contenido principal */
   app-root {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1; /* Permite que el contenido principal crezca para ocupar el espacio disponible */
   }
   
   a {
     text-decoration: none;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .content-wrap {
+    flex: 1; /* Allow content to expand and fill the space */
+  }
+  
+  /* Ensure that the footer component has appropriate styling */
+  app-footer {
+    width: 100%; /* Footer should span the full width of the page */
+    /* Add other styling as needed */
   }

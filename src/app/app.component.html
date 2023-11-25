@@ -1,12 +1,15 @@
 <body>
   <!-- navigation bar to start -->
 
+<div class="content-wrap">
   <div id="nav_bar">
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top" style="padding: 8px 0;"> <!-- Reduce padding to make navbar less thick -->
       <div class="container-fluid">
         <img src="../../../assets/logo.png" class="logo" />
         <a class="navbar-brand" href="." id="title">
-          <h1 class="display-6 justify-content-center my-1">Vecindario Amigo</h1>
+          <h1 class="display-6 justify-content-center my-1" style="font-size: 1.75rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-weight: 500;">
+            Vecindario Amigo
+          </h1> 
         </a>
   
         <button
@@ -22,30 +25,44 @@
         </button>
   
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav" style="margin-left: auto">
-            <a class="nav-link" routerLink="/vecindarios">Vecindarios</a>
-            <a class="nav-link" routerLink="/vecinos">Vecinos</a>
-            <a class="nav-link" routerLink="/negocios">Negocios</a>
-            <a class="nav-link" routerLink="/centrosComerciales">Centros Comerciales</a>
-            <a class="nav-link" routerLink="/gruposDeInteres">Grupos de interes</a>
-            <a class="nav-link" routerLink="/zonasVerdes">Zonas Verdes</a>
-
+          <div class="navbar-nav" style="margin-left: auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;"> <!-- Apply the Apple-like font style to navbar links -->
+            <a class="nav-link" routerLink="/vecindarios" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+              Vecindarios
+            </a>
+          <a class="nav-link" routerLink="/vecinos" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+            Vecinos
+          </a>
+          <a class="nav-link" routerLink="/negocios" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+            Negocios
+          </a>
+          <a class="nav-link" routerLink="/centrosComerciales" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+            Centros Comerciales
+          </a>
+          <a class="nav-link" routerLink="/gruposDeInteres" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+            Grupos de interes
+          </a>
+          <a class="nav-link" routerLink="/zonasVerdes" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+            Zonas Verdes
+          </a>
           </div>
         </div>
       </div>
     </nav>
   </div>
+  
 
   
 
   <div class="container-fluid" id="titulo">
     <h1>{{ title }}</h1>
-</div>
-<div class="container-fluid" id="slogan" *ngIf="showSlogan">
-    <h2>Conecta, Comparte, Cuida - Juntos Creamos Comunidad</h2>
-</div>
+  </div>
+  
+  <div class="container-fluid" id="slogan" *ngIf="showSlogan">
+      <h2>Conecta, Comparte, Cuida - Juntos Creamos Comunidad</h2>
+  </div>
+
   <!-- Main Router Outlet -->
-<div class="container-fluid" id="principal">
+<div class="container-fluid container-to-display" id="principal">
   <div class="row">
     <div class="col-md-12">
       <div>
@@ -54,8 +71,72 @@
     </div>
   </div>
  </div>
-</body>
 
+</div>
+
+<footer class="text-center text-lg-start mt-5" style="background-color: #000000; color: white; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"><!-- Sección: Links -->
+  <section class="">
+    <div class="container text-center text-md-start mt-3">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-3">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-3">
+            <i class="fas fa-gem me-3"></i>Vecindario Amigo
+          </h6>
+          <p>
+            Aquí puedes utilizar filas y columnas para organizar tu contenido de pie de página.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-3">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-3">
+            Productos
+          </h6>
+          <p>
+            <a href="#!" class="text-reset" style="color: #a8a8a8;">Angular</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-3">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-3">
+            Enlaces útiles
+          </h6>
+          <p>
+            <a href="#!" class="text-reset" style="color: #a8a8a8;">Configuraciones</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset" style="color: #a8a8a8;">Ayuda</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-3">
+            Contacto
+          </h6>
+          <p style="color: #a8a8a8;"><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p style="color: #a8a8a8;"><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Sección: Links -->
+</footer>
+
+
+</body>
 <style>
   @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap");
 </style>

@@ -13,22 +13,12 @@ body h2{
     margin-top: 5px; /* Espacio desde el h1 */
     font-size: 20px;
     text-align: center;
-    
-  
 }
 
 main {
   padding: 20px;
   min-height: 80vh; /* Adjust height based on your content */
 }
-
-body {
-  background-image: url(../assets/image.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 
 #titulo{
   display: flex;
@@ -85,6 +75,39 @@ body {
   margin-right: 10px; /* espacio entre la imagen y el texto */
 }
 
+/* Estilo para la imagen de fondo */
+body {
+  background-image: url(../assets/image.png); /* Asegúrate de poner la ruta correcta a tu imagen */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Asegura que el cuerpo de la página sea al menos tan alto como la ventana del navegador */
+  display: flex;
+  flex-direction: column;
+}
 
+/* Resto de estilos */
 
+footer {
+  padding: 10px 0;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  width: 100%;
+  /* Asegúrate de que el footer tenga una posición relativa y no esté fijo */
+  position: relative;
+}
+
+.container-to-display{
+  flex: 1; 
+}
+
+#content-wrap {
+  flex: 1;
+  /* Estilos adicionales si son necesarios */
+}

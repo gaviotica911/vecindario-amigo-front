@@ -14,4 +14,4 @@ import { CentroComercialComponent } from './centroComercial.component';
   providers: [],
   bootstrap: [CentroComercialComponent]
 })
-export class AppModule { }
+export class CentroComercialModule { }

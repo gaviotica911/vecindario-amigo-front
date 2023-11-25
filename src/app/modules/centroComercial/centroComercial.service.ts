@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -15,7 +14,11 @@ export class CentroComercialService {
   constructor(private http: HttpClient) { }
 
   getCentroComerciales(): Observable<CentroComercial[]> {
-    
     return this.http.get<CentroComercial[]>(this.apiUrl);
+  }
+
+  getCentroComercialById(id: number): Observable<CentroComercial> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<CentroComercial>(url);
   }
 }

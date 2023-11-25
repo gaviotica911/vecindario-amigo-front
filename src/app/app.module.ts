@@ -15,6 +15,7 @@ import { PublicacionModule } from './modules/publicacion/publicacion.module';
 import { ZonaVerdeRoutingModule } from './modules/zonaVerde/zonaVerde.routing';
 import { NegocioModule } from './modules/negocios/negocios.module';
 import { InicioModule } from './inicio/inicio.module';
+import { CentroComercialModule } from './modules/centroComercial/centroComercial.module';
 
 
 
@@ -38,7 +39,8 @@ import { InicioModule } from './inicio/inicio.module';
     PublicacionModule,
     ComentarioModule,
     ZonaVerdeRoutingModule,
-    InicioModule
+    InicioModule,
+    CentroComercialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

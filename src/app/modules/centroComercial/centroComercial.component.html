@@ -1,4 +1,4 @@
-
+<!-- Your existing Angular component template with the modified dropdown -->
 <div class="container mt-5">
   <div class="card shadow-sm text-white">
     <div class="card-body">
@@ -6,6 +6,27 @@
       <hr style="margin-bottom: 1hr;">
       <p class="text-center">¿Qué te gustaría hacer?</p>
 
+      <!-- Multiple selection buttons for sorting -->
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          [class.active]="sortBy === 'id'"
+          (click)="sortBy = 'id'; onSortChange()"
+        >
+          ID
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          [class.active]="sortBy === 'nombre'"
+          (click)="sortBy = 'nombre'; onSortChange()"
+        >
+          Nombre
+        </button>
+      </div>
+
+      <!-- Your existing table code -->
       <div class="mt-3">
         <table class="table">
           <thead>
@@ -15,6 +36,7 @@
               <th>Calificación</th>
               <th>Ubicación</th>
               <th>Vecindario</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
@@ -24,9 +46,23 @@
               <td>{{ centroComercial.calificacion }}</td>
               <td>{{ centroComercial.ubicacion }}</td>
               <td>{{ centroComercial.vecindario.nombre }}</td>
+              <td>
+                <button class="btn btn-dark text-white" (click)="verDetalle(centroComercial)">Ver detalle</button>
+              </td>
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <!-- Display detailed information when selectedCentroComercial is not null -->
+      <div *ngIf="selectedCentroComercial">
+        <h2 class="mt-3">Detalles del Centro Comercial</h2>
+        <p><strong>ID:</strong> {{ selectedCentroComercial.id }}</p>
+        <p><strong>Nombre:</strong> {{ selectedCentroComercial.nombre }}</p>
+        <p><strong>Calificación:</strong> {{ selectedCentroComercial.calificacion }}</p>
+        <p><strong>Ubicación:</strong> {{ selectedCentroComercial.ubicacion }}</p>
+        <p><strong>Vecindario:</strong> {{ selectedCentroComercial.vecindario.nombre }}</p>
+        <p><strong>Descripción:</strong> {{ selectedCentroComercial.descripcion }}</p>
       </div>
     </div>
   </div>

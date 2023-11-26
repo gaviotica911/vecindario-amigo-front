@@ -12,7 +12,6 @@ import { VecindariosModule } from './modules/vecindarios/vecindarios.module';
 import { ZonaVerdeModule } from './modules/zonaVerde/zonaVerde.module';
 import { ComentarioModule } from './modules/comentario/comentario.module';
 import { PublicacionModule } from './modules/publicacion/publicacion.module';
-import { ZonaVerdeRoutingModule } from './modules/zonaVerde/zonaVerde.routing';
 import { NegocioModule } from './modules/negocios/negocios.module';
 import { InicioModule } from './inicio/inicio.module';
 import { CentroComercialModule } from './modules/centroComercial/centroComercial.module';
@@ -38,7 +37,6 @@ import { CentroComercialModule } from './modules/centroComercial/centroComercial
     ComentarioModule, 
     PublicacionModule,
     ComentarioModule,
-    ZonaVerdeRoutingModule,
     InicioModule,
     CentroComercialModule
   ],

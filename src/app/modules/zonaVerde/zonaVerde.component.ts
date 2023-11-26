@@ -1,33 +1,49 @@
 import { Component, OnInit } from '@angular/core';
+import { ZonaVerde } from './zonaVerde';
+import { ZonaVerdeService } from './zonaVerde.service';
 
 @Component({
-  selector: 'app-zonaVerde',
+  selector: 'app-zona-verde',
   templateUrl: './zonaVerde.component.html',
-  styleUrls: ['./zonaVerde.component.css']
+  styleUrls: ['./zonaVerde.component.css'],
 })
-export class zonaVerdeComponent implements OnInit {
-  displayzonaVerdeList: boolean = false;
-  displayzonaVerdeDetalle: boolean = false;
+export class ZonaVerdeComponent implements OnInit {
+  zonaVerdes: ZonaVerde[] = [];
+  selectedZonaVerde: ZonaVerde | null = null;
+  sortBy: 'id' | 'nombre' = 'id';
 
-  constructor() { }
+  constructor(private zonaVerdeService: ZonaVerdeService) {}
 
-  showzonaVerdeList(): void {
-    this.displayzonaVerdeList = true;
+  ngOnInit(): void {
+    this.fetchZonaVerdes();
   }
 
-  hidezonaVerdeList(): void {
-    this.displayzonaVerdeList = false;
+  private fetchZonaVerdes(): void {
+    this.zonaVerdeService.getZonaVerdes().subscribe(
+      (data: ZonaVerde[]) => {
+        this.zonaVerdes = data;
+        this.sortZonaVerdes(); // Sort after fetching data
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
   }
 
-  showzonaVerdeDetalle(): void {
-    this.displayzonaVerdeList = true;
+  verDetalle(zonaVerde: ZonaVerde): void {
+    this.selectedZonaVerde = zonaVerde;
+    console.log('Zona Verde Details:', this.selectedZonaVerde);
   }
 
-  hidezonaVerdeDetalle(): void {
-    this.displayzonaVerdeList = false;
+  sortZonaVerdes(): void {
+    if (this.sortBy === 'id') {
+      this.zonaVerdes.sort((a, b) => a.id - b.id);
+    } else if (this.sortBy === 'nombre') {
+      this.zonaVerdes.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    }
   }
 
-  ngOnInit() {
+  onSortChange(): void {
+    this.sortZonaVerdes();
   }
-
 }

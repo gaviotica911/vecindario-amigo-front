@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ZonaVerdeListComponent } from './zonaVerde-list/zonaVerde-list.component';
-import { zonaVerdeComponent } from './zonaVerde.component';
-import {  RouterModule } from '@angular/router';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { ZonaVerdeComponent } from './zonaVerde.component';
 
 @NgModule({
-  imports: [
-    CommonModule,RouterModule
+  declarations: [
+    ZonaVerdeComponent
   ],
-  exports: [ZonaVerdeListComponent, zonaVerdeComponent],
-  declarations: [ZonaVerdeListComponent, zonaVerdeComponent]
+  imports: [
+    BrowserModule,
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [ZonaVerdeComponent]
 })
 export class ZonaVerdeModule { }

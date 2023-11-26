@@ -96,12 +96,11 @@ html, body {
 /* Resto de estilos */
 
 footer {
-
+  padding: 10px 0;
   background-color: #000000;
   color: white;
- padding-bottom: 60px ;
+  text-align: center;
   width: 100%;
-  height: 50px;
   /* Asegúrate de que el footer tenga una posición relativa y no esté fijo */
   position: relative;
 }

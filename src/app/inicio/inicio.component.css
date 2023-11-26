@@ -11,7 +11,7 @@
   }
   
   .card-body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Libre Baskerville', serif; /* Fuente */
     color: #000000;
   }
   
@@ -43,7 +43,7 @@
   }
   
   .card-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Tipografía al estilo de Apple */
+    font-family: 'Libre Baskerville', serif; 
     color: #333; /* Color de texto más oscuro para mejorar el contraste */
   }
   

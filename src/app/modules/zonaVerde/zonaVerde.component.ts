@@ -9,7 +9,7 @@ import { ZonaVerdeService } from './zonaVerde.service';
 })
 export class ZonaVerdeComponent implements OnInit {
   zonaVerdes: ZonaVerde[] = [];
-  selectedZonaVerde: ZonaVerde | null = null;
+  selectedZonaVerde!: ZonaVerde;
   sortBy: 'id' | 'nombre' = 'id';
 
   constructor(private zonaVerdeService: ZonaVerdeService) {}

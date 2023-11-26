@@ -46,4 +46,17 @@
     background-color: #c82333;
     border-color: #bd2130;
   }
+  #mapContainer{
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.54); /* Color blanco con 54% de transparencia */
+    border-radius: 20px;
+    color: black; /* Color de letra */
+    font-family: 'Libre Baskerville';
+    padding: 30px;
+  
+    font-weight: bold;
+  align-items: center;
+  overflow: hidden;
+    
+  }
   

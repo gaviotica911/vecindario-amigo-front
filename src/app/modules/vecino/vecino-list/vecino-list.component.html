@@ -6,11 +6,15 @@
 
 
   <div class="list-container">
+   
  <div class="container-fluid" id="zona">
+  <div class="text-end">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
   <div class="container-fluid" id="lista">
       <ul class="list-group">
 
-        <div *ngFor="let vecino of vecinos" class="col mb-2">
+        <div *ngFor="let vecino of vecinos   | paginate : { itemsPerPage: 10, currentPage: p }" class="col mb-2">
           <ul class="list-group">
             <li class="list-group-item">
              <img

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GrupoDeInteresModule } from './grupoDeInteres/grupoDeInteres.module';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { VecinoModule } from './modules/vecino/vecino.module';
 import { NavBarModule } from './modules/navBar/navBar.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,7 +15,9 @@ import { PublicacionModule } from './modules/publicacion/publicacion.module';
 import { NegocioModule } from './modules/negocios/negocios.module';
 import { InicioModule } from './inicio/inicio.module';
 import { CentroComercialModule } from './modules/centroComercial/centroComercial.module';
-
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
+import {  GoogleMapsModule } from '@angular/google-maps';
 
 
 @NgModule({
@@ -38,7 +40,11 @@ import { CentroComercialModule } from './modules/centroComercial/centroComercial
     PublicacionModule,
     ComentarioModule,
     InicioModule,
-    CentroComercialModule
+    CentroComercialModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule,
+    FormsModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { ZonaVerdeComponent } from './zonaVerde.component';
+import { CommonModule } from '@angular/common';
+import { ZonaVerdeListComponent } from './zonaVerde-list/zonaVerde-list.component';
+
+import {  RouterModule } from '@angular/router';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgxPaginationModule } from 'ngx-pagination';
+
+
 
 @NgModule({
-  declarations: [
-    ZonaVerdeComponent
-  ],
   imports: [
-    BrowserModule,
-    HttpClientModule
+    CommonModule,RouterModule, Ng2SearchPipeModule, NgxPaginationModule
   ],
-  providers: [],
-  bootstrap: [ZonaVerdeComponent]
+  exports: [ZonaVerdeListComponent],
+  declarations: [ZonaVerdeListComponent]
 })
 export class ZonaVerdeModule { }

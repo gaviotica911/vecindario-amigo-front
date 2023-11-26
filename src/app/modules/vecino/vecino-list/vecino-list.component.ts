@@ -12,6 +12,7 @@ export class VecinoListComponent implements OnInit {
   vecinos: Array<VecinoDetail> = [];
   selectedVecino!: VecinoDetail;
   selected: Boolean = false;
+  p: number = 1;
 
   onSelected(vecino: VecinoDetail): void {
     this.selected = true;

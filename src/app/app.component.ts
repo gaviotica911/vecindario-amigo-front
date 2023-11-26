@@ -14,7 +14,7 @@ export class AppComponent {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         // Cambiar el título y mostrar/ocultar el eslogan basado en la ruta
-        if (event.url === '/vecindario') {
+        if (event.url === '/vecindarios') {
           this.title = 'Vecindarios';
           this.showSlogan = false;
         } 

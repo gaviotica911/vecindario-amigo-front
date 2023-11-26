@@ -1,0 +1,7 @@
+.card.shadow-sm{
+    background-color: black;
+    color: aqua;
+}
+.h3.title-neighborhood, .container-fluid dt {
+    color: white;
+}

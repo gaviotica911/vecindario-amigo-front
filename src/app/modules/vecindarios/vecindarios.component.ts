@@ -9,21 +9,16 @@ export class VecindariosComponent implements OnInit {
   displayVecindariosList: boolean = false;
   displayVecindariosDetalle: boolean = false;
 
+  displayVecindariosListOrden: string = "";
+
   constructor() { }
 
-  showVecindariosList(): void {
-    this.displayVecindariosList = true;
+  showVecindariosList(orden?: string): void {
+  this.displayVecindariosListOrden = orden || ""; 
+  this.displayVecindariosList = true;
   }
 
   hideVecindariosList(): void {
-    this.displayVecindariosList = false;
-  }
-
-  showVecindariosDetalle(): void {
-    this.displayVecindariosList = true;
-  }
-
-  hideVecindariosDetalle(): void {
     this.displayVecindariosList = false;
   }
 

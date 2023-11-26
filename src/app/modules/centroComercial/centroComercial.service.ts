@@ -13,8 +13,9 @@ export class CentroComercialService {
 
   constructor(private http: HttpClient) { }
 
-  getCentroComerciales(): Observable<CentroComercial[]> {
-    return this.http.get<CentroComercial[]>(this.apiUrl);
+  getCentroComerciales(page: number, size: number): Observable<any> {
+    const url = `${this.apiUrl}?page=${page}&size=${size}`;
+    return this.http.get(url);
   }
 
   getCentroComercialById(id: number): Observable<CentroComercial> {

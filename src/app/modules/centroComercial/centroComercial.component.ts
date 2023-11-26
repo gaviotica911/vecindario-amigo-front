@@ -10,7 +10,10 @@ import { CentroComercialService } from './centroComercial.service';
 export class CentroComercialComponent implements OnInit {
   centroComerciales: CentroComercial[] = [];
   selectedCentroComercial: CentroComercial | null = null;
-  sortBy: 'id' | 'nombre' = 'id'; // Default sorting by ID
+  sortBy: 'id' | 'nombre' = 'id';
+  currentPage: number = 0;
+  totalPages: number = 0;
+  pageSize: number = 10;
 
   constructor(private centroComercialService: CentroComercialService) {}
 
@@ -18,11 +21,12 @@ export class CentroComercialComponent implements OnInit {
     this.fetchCentroComerciales();
   }
 
-  private fetchCentroComerciales() {
-    this.centroComercialService.getCentroComerciales().subscribe(
-      (data) => {
-        this.centroComerciales = data;
-        this.sortCentroComerciales(); // Initial sorting
+  private fetchCentroComerciales(): void {
+    this.centroComercialService.getCentroComerciales(this.currentPage, this.pageSize).subscribe(
+      (data: any) => {
+        this.centroComerciales = data.content;
+        this.totalPages = data.totalPages;
+        this.sortCentroComerciales(); // Sort after fetching data
       },
       (error) => {
         console.error('Error fetching data:', error);
@@ -30,20 +34,31 @@ export class CentroComercialComponent implements OnInit {
     );
   }
 
-  verDetalle(centroComercial: CentroComercial): void {
-    this.centroComercialService
-      .getCentroComercialById(centroComercial.id)
-      .subscribe(
-        (data) => {
-          this.selectedCentroComercial = data;
-          console.log('Centro Comercial Details:', this.selectedCentroComercial);
-        },
-        (error) => {
-          console.error('Error fetching centroComercial details:', error);
-        }
-      );
+  goToPreviousPage(): void {
+    if (this.currentPage > 0) {
+      this.currentPage -= 1;
+      this.fetchCentroComerciales();
+    }
   }
 
+  goToNextPage(): void {
+    if (this.currentPage < this.totalPages - 1) {
+      this.currentPage += 1;
+      this.fetchCentroComerciales();
+    }
+  }
+
+  verDetalle(centroComercial: CentroComercial): void {
+    this.centroComercialService.getCentroComercialById(centroComercial.id).subscribe(
+      (data) => {
+        this.selectedCentroComercial = data;
+        console.log('Centro Comercial Details:', this.selectedCentroComercial);
+      },
+      (error) => {
+        console.error('Error fetching centroComercial details:', error);
+      }
+    );
+  }
   sortCentroComerciales(): void {
     if (this.sortBy === 'id') {
       this.centroComerciales.sort((a, b) => a.id - b.id);
@@ -51,8 +66,6 @@ export class CentroComercialComponent implements OnInit {
       this.centroComerciales.sort((a, b) => a.nombre.localeCompare(b.nombre));
     }
   }
-
-  // Function to handle sorting change
   onSortChange(): void {
     this.sortCentroComerciales();
   }

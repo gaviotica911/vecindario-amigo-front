@@ -8,6 +8,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { CentroComercialComponent } from './modules/centroComercial/centroComercial.component';
 import { GrupoDeInteresListComponent } from './grupoDeInteres/grupoDeInteres-list/grupoDeInteres-list.component';
 import { NegociosComponent } from './modules/negocios/negocios.component';
+import { AyudaComponent } from './modules/Ayuda/ayuda.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'zonasVerdes', component: ZonaVerdeComponent },
   { path: 'gruposDeInteres', component: GrupoDeInteresListComponent},
   { path: 'negocios', component: NegociosComponent},
+  {path: 'ayuda',component:AyudaComponent}
 
   // otras rutas...
 ];

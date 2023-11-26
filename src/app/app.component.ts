@@ -38,6 +38,10 @@ export class AppComponent {
           this.title = 'Centros Comerciales';
           this.showSlogan = false;
         }
+        else if (event.url === '/ayuda') {
+          this.title = 'Ayuda';
+          this.showSlogan = false;
+        }
         else {
           this.title = 'Vecindario Amigo';
           this.showSlogan = true;

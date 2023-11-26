@@ -3,10 +3,10 @@ import { Vecino } from "../modules/vecino/vecino";
 
 
 export class GrupoDeInteresDetail extends GrupoDeInteres {
-  vecinos: Array<Vecino>
+  vecinos?: Array<Vecino>
 
     constructor(id: number,
-      nombre: string,
+      nombre: string, 
       descripcion: string,
       vecinos: Array<Vecino>
 

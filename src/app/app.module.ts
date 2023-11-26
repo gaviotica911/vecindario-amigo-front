@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GrupoDeInteresModule } from './grupoDeInteres/grupoDeInteres.module';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 import { VecinoModule } from './modules/vecino/vecino.module';
 import { NavBarModule } from './modules/navBar/navBar.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -41,7 +41,7 @@ import {  GoogleMapsModule } from '@angular/google-maps';
     ComentarioModule,
     InicioModule,
     CentroComercialModule,
-    Ng2SearchPipeModule,
+
     NgxPaginationModule,
     FormsModule,
     GoogleMapsModule

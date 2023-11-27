@@ -7,6 +7,7 @@ import { NegociosComponent } from './negocios.component';
 import { ComentarioModule } from "../comentario/comentario.module";
 import { Publicacion } from '../publicacion/publicacion';
 import { PublicacionModule } from '../publicacion/publicacion.module';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -15,7 +16,7 @@ import { PublicacionModule } from '../publicacion/publicacion.module';
     exports: [NegociosListComponent, NegociosComponent],
     imports: [
         CommonModule, 
-        ComentarioModule,PublicacionModule
+        ComentarioModule,PublicacionModule,NgxPaginationModule
     ]
 })
 export class NegocioModule { }

@@ -36,7 +36,9 @@ main {
 
 /* Estilos Generales de la Navbar */
 .navbar {
-  background-color: black; /* Fondo completamente transparente */
+  background-color: black;
+  display: flex;
+ 
  padding: 20px;
 }
 
@@ -46,6 +48,7 @@ main {
   font-family: 'Libre Baskerville'; /* Estilo de fuente */
   font-weight: bold; /* Letra más gruesa */
   font-size: 120%; /* Tamaño de la letra */
+  display: flex;
 }
 
 /* Enlaces de la Navbar */
@@ -55,6 +58,7 @@ main {
   color: white; /* Color de letra */
   font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
   font-weight: bold;
+  text-align: center;
 }
 
 /* Enlace Activo de la Navbar */

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./negocios.component.css']
 })
 export class NegociosComponent implements OnInit {
-  displayNegociosList: boolean = false;
+  displayNegociosList: boolean = true;
   displayNegociosDetalle: boolean = false;
 
   constructor() { }

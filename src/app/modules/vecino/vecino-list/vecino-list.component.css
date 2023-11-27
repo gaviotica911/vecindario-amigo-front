@@ -16,6 +16,14 @@ li{
     display: inline-block;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+background-color: #e6e7e8; /* Este es un color de ejemplo, puedes usar el que prefieras */
+}
+
 #post{
     padding: 20px;
     display: inline-block;

@@ -43,6 +43,13 @@ li{
     order:1;
   }
 
+  .cursor-pointer {
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+  background-color: #e6e7e8; /* Este es un color de ejemplo, puedes usar el que prefieras */
+}
 
   @media (max-width: 768px) {
     #main-container {

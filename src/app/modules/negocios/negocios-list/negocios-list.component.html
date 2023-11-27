@@ -5,6 +5,9 @@
   </div>
 
   <div class="list-container">
+    <div class="text-end">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
     <div class="container-fluid" id="zona">
       <div class="container-fluid" id="botones-ordenamiento">
         <button (click)="ordenarAscendente()" class="btn btn-primary">Ordenar Ascendente</button>
@@ -12,18 +15,17 @@
       </div>
 
       <div class="container-fluid" id="lista">
-        <button (click)="cambiarPagina(-1)" [disabled]="paginaActual === 1">Anterior</button>
-        <button (click)="cambiarPagina(1)" [disabled]="paginaActual === maximaPagina()">Siguiente</button>
-
+        
         <ul class="list-group">
-          <div *ngFor="let negocio of negociosPaginados" class="col mb-2">
+          <div *ngFor="let negocio of negocios  | paginate : { itemsPerPage: 10, currentPage: p }" class="col mb-2">
             <ul class="list-group">
-              <li class="list-group-item" (click)="onSelected(negocio)">
+              <li class="list-group-item cursor-pointer list-group-item:hover " (click)="onSelected(negocio)">
                 {{ negocio.nombre }} - Calificación: {{ negocio.calificacion }}
               </li>
             </ul>
           </div>      
         </ul>
+       
       </div>
     </div>
   </div>

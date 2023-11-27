@@ -3,12 +3,12 @@
 </div>
 
 <form>
-  <div class="form-group">
-    <label for="nombre">Grupo:</label>
-    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su grupo" maxlength="50" required>
-  </div>
-  <button type="submit" class="btn btn-primary">Filtrar</button>
+  <div class="col-4">
+    <button class="btn btn-primary"(click)="ordenarTorneos($event)">Ordenar alfabéticamente</button>
+    <br>
+</div>
 </form>
+
 
 <hr />
 <div class="container-fluid" id="zona">

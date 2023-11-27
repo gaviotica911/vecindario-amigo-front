@@ -16,12 +16,14 @@ export class GrupoDeInteresListComponent implements OnInit, OnChanges{
   selected: Boolean = false;
   selectedGrupoDeInteres!: GrupoDeInteresDetail;
   mostrarListaFlag: boolean = false;
+  p: number = 1;
 
   @Input() orden?: string;
 
   currentPage: number = 0;
   totalPages: number = 0;
-
+  searchTerm: string = '';
+  selectedFilter: string = 'nombre';
   constructor(private grupoDeInteresService: GrupoDeInteresService) { }
 
   // getGruposDeInteres(): void {
@@ -30,6 +32,17 @@ export class GrupoDeInteresListComponent implements OnInit, OnChanges{
   //   });
   // }
 
+
+
+  ordenarTorneos(event: Event): void {
+    event.preventDefault();
+    this.gruposDeInteres.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    event.preventDefault();
+  }
+
+  resetTorneos(): void {
+    this.getGruposDeInteres();
+  }
 
   getGruposDeInteres(): void {
     // Updated to support pagination
@@ -76,11 +89,14 @@ export class GrupoDeInteresListComponent implements OnInit, OnChanges{
   ngOnInit() {
     this.getGruposDeInteres();
 
+
+
   }
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.orden){
       this.getGruposDeInteres();
+
     }
   }
 }

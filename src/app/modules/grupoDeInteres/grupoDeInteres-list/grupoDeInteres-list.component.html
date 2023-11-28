@@ -11,13 +11,17 @@
       </div>
 
       <div class="container-fluid" id="lista">
-        <tr *ngFor="let vecindario of gruposDeInteres">
           <ul class="list-group">
-            <li class="list-group-item cursor-pointer list-group-item:hover " (click)="onSelected(vecindario)">
-              {{ vecindario.nombre }}
-            </li>
+            <div *ngFor="let vecindario of gruposDeInteres"  class="col mb-2">
+                <ul class="list-group">
+
+                <li class="list-group-item cursor-pointer list-group-item:hover " (click)="onSelected(vecindario)">
+                  {{ vecindario.nombre }}
+                </li>
+                </ul> 
+              </div>
           </ul>              
-        </tr>
+  
        
       </div>
       <div class="pagination-buttons mt-2 d-flex justify-content-center">

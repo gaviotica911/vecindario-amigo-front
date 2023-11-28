@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GrupoDeInteresModule } from './grupoDeInteres/grupoDeInteres.module';
+import { GrupoDeInteresModule } from './modules/grupoDeInteres/grupoDeInteres.module';
 
 import { VecinoModule } from './modules/vecino/vecino.module';
 import { NavBarModule } from './modules/navBar/navBar.module';

@@ -2,7 +2,7 @@
 import { Vecino } from './vecino';
 import { Publicacion } from '../publicacion/publicacion';
 import { Vecindario } from '../vecindarios/vecindario';
-import { GrupoDeInteres} from '../../grupoDeInteres/grupoDeInteres';  
+import { GrupoDeInteres} from '../grupoDeInteres/grupoDeInteres';  
 
 
 export class VecinoDetail extends Vecino{

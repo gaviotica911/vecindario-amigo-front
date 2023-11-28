@@ -1,0 +1,63 @@
+#zona {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+li {
+  font-size: 1.2rem;
+  margin-right: 200px;
+  color: black;
+  font-family: 'Libre Baskerville';
+  width: 100%; /* Hace que el <li> tome todo el ancho disponible */
+}
+
+#lista { 
+  padding: 20px; /* Reducido de 100px */
+  display: block; /* Cambiado de inline-block a block */
+}
+
+#main-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.54);
+  border-radius: 20px;
+}
+
+.detail-container {
+  flex: 1;
+  order: 2;
+  border-radius: 20px;
+  padding: 100px; /* Opcional: considera reducir el padding si es demasiado grande */
+}
+
+.list-container {
+  flex: 1;
+  order: 1;
+}
+
+
+  .cursor-pointer {
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+  background-color: #e6e7e8; /* Este es un color de ejemplo, puedes usar el que prefieras */
+}
+
+  @media (max-width: 768px) {
+    #main-container {
+      flex-direction: column;
+    }
+  
+    .detail-container, .list-container {
+      order: 0; /* Restablece el orden para dispositivos móviles */
+    }
+  }
+img {
+    width: 40px; /* o el tamaño que prefieras */
+    height: 40px; /* igual al ancho para mantener la forma de círculo */
+    border-radius: 50%; /* esto hace que la imagen sea redonda */
+    object-fit: cover; /* asegura que la imagen se ajuste bien */
+    margin-right: 10px; /* espacio entre la imagen y el texto */
+  }
+  

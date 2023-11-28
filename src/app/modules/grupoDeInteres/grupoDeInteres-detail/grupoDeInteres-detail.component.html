@@ -1,0 +1,30 @@
+<div class= "card mb-3" id="detail" style="max-width: 540px">
+  <div class="row g-0">
+    <div class="card-body">
+      <!-- Título del Vecindario -->
+      <p class="h3 title-neighborhood">{{ grupoDeInteresDetail.nombre }}</p>
+
+      <!-- Contenedor de detalles -->
+      <div class="col-md-8">
+        <div class="card-body">
+          <dl>
+            <!-- Detalles del Vecindario -->
+            <dt>Descripcion</dt>
+            <dd>{{ grupoDeInteresDetail.descripcion }}</dd>
+            <hr />
+
+            <!-- Sección de Vecinos -->
+            <dt>Vecinos</dt>
+            <dd *ngIf="grupoDeInteresDetail.vecinos && grupoDeInteresDetail.vecinos.length > 0; else noVecinos">
+              <ul>
+                <li *ngFor="let vecino of grupoDeInteresDetail.vecinos">{{ vecino.nombre }} - {{ vecino.edad }} años</li>
+              </ul>
+            </dd>
+            <ng-template #noVecinos>No hay vecinos registrados</ng-template>
+            <hr />
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

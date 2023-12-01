@@ -1,37 +1,34 @@
+<br>
 <div class="container-fluid" id="main-container">
   <div *ngIf="selected" class="detail-container">
     <app-vecino-detail [vecinoDetail]="selectedVecino"></app-vecino-detail>
   </div>
 
 
-
   <div class="list-container">
-   
- <div class="container-fluid" id="zona">
+    <div class="container-fluid" id="zona">
+      <div class="central-list-container">
+        <ul class="list-group">
+          <div *ngFor="let vecino of vecinos | paginate: { itemsPerPage: 10, currentPage: p }" class="col mb-2">
+            <ul class="list-group">
+              <li class="list-group-item cursor-pointer" (click)="onSelected(vecino)">
+                <div class="d-flex align-items-start">
+                  <img class="comment-image" src="{{ vecino.profilePic }}" alt="{{ vecino.nombre }}" />
+                  <div class="ms-2">
+                    <div class="fw-bold">{{ vecino.nombre }}</div>
+                    <div>{{ vecino.vecindario.nombre }}</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>      
+        </ul>
+        <div class="text-end">
+          <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
   
-  <div class="container-fluid" id="lista">
-      <ul class="list-group">
-
-        <div *ngFor="let vecino of vecinos   | paginate : { itemsPerPage: 10, currentPage: p }" class="col mb-2">
-          <ul class="list-group">
-            <li class="list-group-item cursor-pointer list-group-item:hover" (click)="onSelected(vecino)">
-             <img
-                class="comment-image"
-                src="{{ vecino.profilePic }}"
-                alt="{{ vecino.nombre }}"  
-                
-              />
-              {{ vecino.nombre }}
-            </li>
-          </ul>
-        </div>      
-      </ul>
-    </div>
-    <div class="text-end">
-      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>
-</div>
-
-

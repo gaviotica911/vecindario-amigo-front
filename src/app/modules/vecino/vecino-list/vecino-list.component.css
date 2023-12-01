@@ -12,16 +12,30 @@ li{
     font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
 }
 #lista{ 
-    padding: 20px;
+    padding: 20px 0 0 0 0;
     display: inline-block;
 }
+.central-list-container {
+  max-width: 600px; /* O el ancho máximo que prefieras */
+  margin: 0 auto; /* Esto centrará el div */
+  padding: 0 15px; /* Agrega algo de espacio en los lados */
+}
 
+.text-center {
+  text-align: center; /* Esto asegurará que la paginación esté centrada */
+}
+
+#lista p{ 
+  color: gray;
+  font-size: 1rem; /* Tamaño de la letra */
+}
 .cursor-pointer {
   cursor: pointer;
 }
 
 .list-group-item:hover {
-background-color: #e6e7e8; /* Este es un color de ejemplo, puedes usar el que prefieras */
+background-color: #e6e7e8; 
+display: block;
 }
 
 #post{
@@ -68,4 +82,21 @@ img {
     object-fit: cover; /* asegura que la imagen se ajuste bien */
     margin-right: 10px; /* espacio entre la imagen y el texto */
   }
+  .d-flex {
+    display: flex; /* Utiliza flexbox para alinear los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente los elementos dentro de la fila */
+  }
   
+  .comment-image {
+    width: 50px; /* o el tamaño que prefieras */
+    height: 50px; /* o el tamaño que prefieras */
+    border-radius: 50%; /* Si deseas que la imagen sea redonda */
+  }
+  
+  .ms-2 {
+    margin-left: 0.5rem; /* Añade un poco de espacio entre la imagen y el texto */
+  }
+  
+  .fw-bold {
+    font-weight: bold; /* Hace que el nombre del vecino sea en negrita */
+  }

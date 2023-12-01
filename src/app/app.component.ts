@@ -27,7 +27,7 @@ export class AppComponent {
           this.showSlogan = false;
         }
         else if (event.url === '/gruposDeInteres') {
-          this.title = 'Grupos de interes';
+          this.title = 'Grupos de Interés';
           this.showSlogan = false;
         }
         else if (event.url === '/negocios') {

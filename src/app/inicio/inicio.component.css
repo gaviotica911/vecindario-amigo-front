@@ -1,60 +1,124 @@
+body, html {
+  height: 100%; /* Asegúrate de que el html y body ocupen toda la altura de la pantalla */
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el relleno predeterminado */
+}
+
+.body-background {
+  background-image: url('../../assets/image.png'); /* Asegúrate de poner la ruta correcta a tu imagen */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 60vh;
+}
+
+.after-background {
+  background-color: white;
+  width: 100%;
+  
+}
+
+/* Contenedor principal que sostiene las tarjetas */
+.main-container {
+  
+  justify-content: space-around; /* Espacio uniforme alrededor de las tarjetas */
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en pantallas más pequeñas */
+  gap: 20px; /* Espacio entre tarjetas */
+  top: -20vh;
+  position: relative; /* Posiciona el contenedor principal en su posición normal en el flujo del documento */
+}
+
+/* Estilos para las tarjetas */
 .card.shadow-sm.text-white {
-    background-color: rgba(255, 255, 255, 0.54);
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  .main-container {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.54); /* Color blanco con 54% de transparencia */
-    border-radius: 20px;
-  }
+
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+#Bienvenidos {
+  background-image: url('https://images.unsplash.com/photo-1472553384749-8596bacb90c5?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center; /* Asegura que la imagen esté centrada dentro de la tarjeta */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  border: none;
+}
+#Características {
+  background-image: url('https://images.unsplash.com/photo-1576208861541-335784ba66c9?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center; /* Asegura que la imagen esté centrada dentro de la tarjeta */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  border: none;
+}
+#about {
+  background-image: url('https://images.unsplash.com/photo-1625283518295-22f95787174e?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center; /* Asegura que la imagen esté centrada dentro de la tarjeta */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  border: none;
+}
+#contacto {
+  background-image: url('https://plus.unsplash.com/premium_photo-1700566982560-31ed8b46991a?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center; /* Asegura que la imagen esté centrada dentro de la tarjeta */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  border: none;
+}
+.card.shadow-sm.text-white:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilos para el cuerpo y el título de la tarjeta */
+.card-body {
+  display: flex; /* Activa Flexbox */
+  flex-direction: column; /* Organiza los elementos internos verticalmente */
+  justify-content: flex-end; /* Alinea los elementos internos al final (parte inferior) */
+  font-family: 'Libre Baskerville', serif;
+  color: #333;
+  font-size: 1.2em;
+  line-height: 1.6;
+  height: 400px; /* Altura fija para la tarjeta */
+}
+.card-title {
+  /*
+  font-size: 2em;
+  color: #87c1ff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5em;
+  */
+  font-family: 'Libre Baskerville', serif;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+  font-weight: bold;
+ 
+
+}
+
+.card-body p {
+  font-size: 1em;
+}
+#mas{
+  padding: 20px;
+  top: -10vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 200px;
+}
+#mas h1{
+  font-family: 'Libre Baskerville', serif;
+  color: black;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5em;
+  font-size: 2em;
+  font-weight: bold;
+}
+#mas li{
+  font-family: 'Libre Baskerville', serif;
+  color: black;
   
-  .card-body {
-    font-family: 'Libre Baskerville', serif; /* Fuente */
-    color: #000000;
-  }
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
   
-  .card-title {
-    font-size: 1.75em;
-    margin-bottom: 0.5em;
-  }
-  
-  .card-body p {
-    font-size: 1.1em;
-  }
-  
-  .card.shadow-sm.text-white {
-    background-color: rgba(255, 255, 255, 0.8); /* Aumentamos la opacidad para mejorar la legibilidad */
-    border-radius: 10px; /* Bordes redondeados para un look moderno */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave para un efecto más sutil */
-    transition: transform 0.3s ease-in-out; /* Efecto 'hover' sutil */
-  }
-  
-  .card.shadow-sm.text-white:hover {
-    transform: translateY(-5px); /* Levanta la tarjeta ligeramente al pasar el mouse */
-  }
-  
-  .main-container {
-    display: flex;
-    justify-content: space-around; /* Espacio uniforme alrededor de las tarjetas */
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en pantallas más pequeñas */
-    gap: 20px; /* Espacio entre tarjetas */
-  }
-  
-  .card-body {
-    font-family: 'Libre Baskerville', serif; 
-    color: #333; /* Color de texto más oscuro para mejorar el contraste */
-  }
-  
-  .card-title {
-    font-size: 2em; /* Título más grande */
-    color: #87c1ff; /* Color que complementa el esquema de color actual */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto sutil para dar profundidad */
-  }
-  
-  .card-body p {
-    font-size: 1.2em; /* Aumentamos el tamaño del texto para una mejor lectura */
-    line-height: 1.6; /* Espaciado de línea para una mejor legibilidad */
-  }
-  
+}

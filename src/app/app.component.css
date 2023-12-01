@@ -1,18 +1,25 @@
 /* General Styles */
 body h1{
-  font-family: 'League Spartan', sans-serif;
+  
+  font-family: 'Libre Baskerville', serif; /* Fuente */
   margin: 0;
   padding: 0;
-  font-weight: bold;
-  font-size: 50px;
-padding: 10px;
+color:black;
+  font-size: 60px;
+padding: 5px;
+font-weight: bold; 
+
+font-weight: 920;
 }
 body h2{
   font-family: 'Libre Baskerville', serif; /* Fuente */
     font-style: italic; /* Estilo de fuente cursiva */
     margin-top: 5px; /* Espacio desde el h1 */
-    font-size: 20px;
+    font-size: 27px;
     text-align: center;
+    font-weight: 100;
+    
+   
 }
 
 main {
@@ -20,18 +27,19 @@ main {
   min-height: 80vh; /* Adjust height based on your content */
 }
 
-#titulo{
+#titulo {
   display: flex;
-  align-items: stretch; /* Alinea los contenedores verticalmente */
-  padding-top: 120px;
-  padding-left: 1080px;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente si es necesario */
+  padding-top: 120px; /* Ajusta según necesites */
+  font-family: 'League Spartan';
+  font-weight: bold; 
 }
-#slogan {
+ #slogan {
   display: flex;
-  align-items: stretch; /* Alinea los contenedores verticalmente */
-  padding-top: 20px;
-  padding-left: 1080px;
- 
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente si es necesario */
+  padding-top: 10px; /* Ajusta según necesites */
 }
 
 /* Estilos Generales de la Navbar */
@@ -44,22 +52,28 @@ main {
 
 /* Título de la Navbar */
 .navbar-brand h1 {
-  color: white; /* Color de letra */
-  font-family: 'Libre Baskerville'; /* Estilo de fuente */
+  color: white;
+  font-family: 'Libre Baskerville', serif; /* Fuente */
+
   font-weight: bold; /* Letra más gruesa */
   font-size: 120%; /* Tamaño de la letra */
   display: flex;
+
 }
 
 /* Enlaces de la Navbar */
 .navbar-nav .nav-link {
-  font-size: 20px; /* Tamaño de la letra */
+  font-size: 23px; /* Tamaño de la letra */
   margin-right: 20px; /* Espacio a la derecha de cada enlace */
-  color: white; /* Color de letra */
-  font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
+  color: white;
+  font-family: 'Libre Baskerville', serif; /* Fuente */
   font-weight: bold;
   text-align: center;
+  
+
 }
+
+
 
 /* Enlace Activo de la Navbar */
 .navbar-nav .nav-link.active {
@@ -100,11 +114,13 @@ html, body {
 /* Resto de estilos */
 
 footer {
+  font-family: 'Libre Baskerville', serif; /* Fuente */
   padding: 10px 0;
   background-color: #000000;
   color: white;
   text-align: center;
   width: 100%;
+  
   /* Asegúrate de que el footer tenga una posición relativa y no esté fijo */
   position: relative;
 }
@@ -116,4 +132,9 @@ footer {
 #content-wrap {
   flex: 1;
   /* Estilos adicionales si son necesarios */
+}
+
+.nav-link:hover {
+  transform: translateY(-5px); /* Desplaza el botón hacia arriba */
+  transition: transform 0.3s; /* Hace que el movimiento sea suave */
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ZonaVerdeListComponent } from './zonaVerde-list/zonaVerde-list.component';
+import { ZonaVerdeComponent } from './zonaVerde.component';
 
 import {  RouterModule } from '@angular/router';
 
@@ -12,7 +12,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
   imports: [
     CommonModule,RouterModule, NgxPaginationModule
   ],
-  exports: [ZonaVerdeListComponent],
-  declarations: [ZonaVerdeListComponent]
+  exports: [ZonaVerdeComponent],
+  declarations: [ZonaVerdeComponent]
 })
 export class ZonaVerdeModule { }

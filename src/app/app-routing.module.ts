@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { VecindariosComponent } from './modules/vecindarios/vecindarios.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { CentroComercialComponent } from './modules/centroComercial/centroComercial.component';
-import { GrupoDeInteresListComponent } from './grupoDeInteres/grupoDeInteres-list/grupoDeInteres-list.component';
+import { GrupoDeInteresListComponent } from './modules/grupoDeInteres/grupoDeInteres-list/grupoDeInteres-list.component';
 import { NegociosComponent } from './modules/negocios/negocios.component';
 import { AyudaComponent } from './modules/Ayuda/ayuda.component';
 

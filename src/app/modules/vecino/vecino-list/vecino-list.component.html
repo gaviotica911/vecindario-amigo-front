@@ -8,9 +8,7 @@
   <div class="list-container">
    
  <div class="container-fluid" id="zona">
-  <div class="text-end">
-    <pagination-controls (pageChange)="p = $event"></pagination-controls>
-  </div>
+  
   <div class="container-fluid" id="lista">
       <ul class="list-group">
 
@@ -28,6 +26,9 @@
           </ul>
         </div>      
       </ul>
+    </div>
+    <div class="text-end">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
   </div>
 </div>

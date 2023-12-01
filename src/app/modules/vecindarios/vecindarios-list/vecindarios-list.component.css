@@ -1,28 +1,16 @@
-/* Estilo para la tarjeta */
-.card.list-vecindarios.mb-3 {
-    background-color: black; /* Fondo negro para la tarjeta */
-    color: aqua; /* Color del texto en toda la tarjeta */
-}
-
-/* Estilo para la tabla dentro de la tarjeta */
-.card.list-vecindarios.mb-3 .table {
-    background-color: black; /* Fondo negro para la tabla */
-    color: aqua; /* Color del texto en la tabla */
-}
-
 /* Estilo para los encabezados de la tabla */
 .card.list-vecindarios.mb-3 .table thead th {
-    background-color: black; /* Fondo negro para el encabezado */
-    color: white; /* Color de texto blanco para el encabezado */
-    border-bottom: 2px solid aqua; /* Borde inferior para los encabezados de columna */
+    background-color: rgba(255, 255, 255, 0.54); /* Fondo negro para el encabezado */
+    color: black; /* Color de texto blanco para el encabezado */
+    border-bottom: 2px solid black; /* Borde inferior para los encabezados de columna */
 }
 
 /* Estilo para las filas y celdas de la tabla */
 .card.list-vecindarios.mb-3 .table tbody tr, 
 .card.list-vecindarios.mb-3 .table tbody td {
-    background-color: black; /* Fondo negro para filas y celdas */
-    color: aqua; /* Color de texto para filas y celdas */
-    border-color: aqua; /* Cambia el color del borde si es necesario */
+    background-color: rgba(255, 255, 255, 0.54); /* Fondo negro para filas y celdas */
+    color: black; /* Color de texto para filas y celdas */
+    border-color: black; /* Cambia el color del borde si es necesario */
 }
 
 /* Estilo para hacer que las celdas sean clickeables */

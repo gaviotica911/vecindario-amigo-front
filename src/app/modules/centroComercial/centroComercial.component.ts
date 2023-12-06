@@ -69,4 +69,20 @@ export class CentroComercialComponent implements OnInit {
   onSortChange(): void {
     this.sortCentroComerciales();
   }
+  getStyle() {
+    if (this.selectedCentroComercial) {
+      return { 'width': '60%', 'margin': '0' };
+    } else {
+      return { 'width': 'auto', 'margin': '0 auto' };
+    }
+  }
+  getTableStyle() {
+    if (this.selectedCentroComercial) {
+      return { 'width': '60%', 'margin': '0' };
+    } else {
+      return { 'width': 'auto', 'margin': '0 auto' };
+    }
+  }
+  
+  
 }

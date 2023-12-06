@@ -11,6 +11,7 @@ export class ZonaVerdeComponent implements OnInit {
   zonaVerdes: ZonaVerde[] = [];
   selectedZonaVerde!: ZonaVerde;
   sortBy: 'id' | 'nombre' = 'id';
+  ascendingOrder: boolean = true; // Add this line
 
   constructor(private zonaVerdeService: ZonaVerdeService) {}
 
@@ -37,13 +38,24 @@ export class ZonaVerdeComponent implements OnInit {
 
   sortZonaVerdes(): void {
     if (this.sortBy === 'id') {
-      this.zonaVerdes.sort((a, b) => a.id - b.id);
+      this.zonaVerdes.sort((a, b) => (this.ascendingOrder ? a.id - b.id : b.id - a.id));
     } else if (this.sortBy === 'nombre') {
-      this.zonaVerdes.sort((a, b) => a.nombre.localeCompare(b.nombre));
+      this.zonaVerdes.sort((a, b) =>
+        this.ascendingOrder ? a.nombre.localeCompare(b.nombre) : b.nombre.localeCompare(a.nombre)
+      );
     }
   }
 
   onSortChange(): void {
+    this.ascendingOrder = !this.ascendingOrder; // Toggle the sorting order
     this.sortZonaVerdes();
+  }
+
+  getTableStyle() {
+    if (this.selectedZonaVerde) {
+      return { 'width': '60%', 'margin': '0' };
+    } else {
+      return { 'width': 'auto', 'margin': '0 auto' };
+    }
   }
 }

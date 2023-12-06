@@ -51,3 +51,11 @@
 .moveToLeft {
   justify-content: flex-start;
 }
+
+.table tbody tr {
+  transition: background-color 0.3s;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Darker color on hover */
+}

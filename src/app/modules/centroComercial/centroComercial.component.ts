@@ -1,3 +1,5 @@
+// centroComercial.component.ts
+
 import { Component, OnInit } from '@angular/core';
 import { CentroComercial } from './centroComercial';
 import { CentroComercialService } from './centroComercial.service';
@@ -14,6 +16,7 @@ export class CentroComercialComponent implements OnInit {
   currentPage: number = 0;
   totalPages: number = 0;
   pageSize: number = 10;
+  ascendingOrder: boolean = true; // Add a variable to track sorting order
 
   constructor(private centroComercialService: CentroComercialService) {}
 
@@ -59,14 +62,35 @@ export class CentroComercialComponent implements OnInit {
       }
     );
   }
+
   sortCentroComerciales(): void {
+    let sortOrder = this.ascendingOrder ? 1 : -1;
+
     if (this.sortBy === 'id') {
-      this.centroComerciales.sort((a, b) => a.id - b.id);
+      this.centroComerciales.sort((a, b) => sortOrder * (a.id - b.id));
     } else if (this.sortBy === 'nombre') {
-      this.centroComerciales.sort((a, b) => a.nombre.localeCompare(b.nombre));
+      this.centroComerciales.sort((a, b) => sortOrder * a.nombre.localeCompare(b.nombre));
     }
   }
+
   onSortChange(): void {
+    this.ascendingOrder = !this.ascendingOrder;
     this.sortCentroComerciales();
+  }
+
+  getStyle() {
+    if (this.selectedCentroComercial) {
+      return { 'width': '60%', 'margin': '0' };
+    } else {
+      return { 'width': 'auto', 'margin': '0 auto' };
+    }
+  }
+
+  getTableStyle() {
+    if (this.selectedCentroComercial) {
+      return { 'width': '60%', 'margin': '0' };
+    } else {
+      return { 'width': 'auto', 'margin': '0 auto' };
+    }
   }
 }

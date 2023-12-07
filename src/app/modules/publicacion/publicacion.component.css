@@ -9,6 +9,7 @@
     display: flex;
     align-items: center; /* Alinea verticalmente */
     font-family: 'Libre Baskerville';
+    font-size: 20px;
   }
   .list-group{
     font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
@@ -26,6 +27,7 @@
     display: flex;
     align-items: center; /* Alinea verticalmente el texto con los iconos */
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
+   
   }
   
   .list-group-item svg {
@@ -40,5 +42,34 @@
   .comment-container {
     flex: 1; /* Ocupa el espacio restante */
     /* Agrega más estilos si es necesario */
+    
+  }
+ 
+  .card-footer {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;     /* Centra los elementos verticalmente */
+    gap: 8px;               /* Espaciado entre cada elemento */
+    font-family: 'Libre Baskerville';
+    font-size: 15px;
+  }
+  
+  
+  
+  .card-footer p {
+    margin: 0; /* Elimina el margen predeterminado de los párrafos */
+    display: flex; /* Para centrar el texto dentro del párrafo si es necesario */
+    align-items: center; /* Centra verticalmente el texto dentro del párrafo */
+  }
+
+  .comment-button {
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es un botón */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para el fondo y el color del texto */
+    /* Estilos adicionales para tu botón pueden ir aquí */
+  }
+  
+  .comment-button:hover {
+    background-color: #ececec; /* Color de fondo al hacer hover */
+    color: rgb(52, 51, 53); /* Color del texto al hacer hover */
   }
   

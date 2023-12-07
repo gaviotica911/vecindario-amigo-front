@@ -1,7 +1,7 @@
 
 <div class="card mb-3" id="detail" style="max-width: 540px    ">
-  <div class="row g-0">
-    <div class="col-md-4">
+  <div class="row g-0 align-items-center">
+    <div class="col-md-4 d-flex justify-content-center">
       <img  
           class="img-fluid"
           src="{{ vecinoDetail.profilePic }}"
@@ -10,27 +10,21 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">{{ vecinoDetail.nombre }}</h5>
+        <p class="card-text" style= "font-weight: bold;" >{{ vecinoDetail.nombre }}</p>
         <p class="card-text">Edad: {{ vecinoDetail.edad }}</p>
-        <p class="card-text">Descripcion: {{ vecinoDetail.descripcion }}</p>
+        <p class="card-text">Descripción: {{ vecinoDetail.descripcion }}</p>
         <p class="card-text">Vecindario: {{ vecinoDetail.vecindario.nombre }}</p>
         <p class="card-text"><small class="text-body-secondary">Grupos de interés: </small></p>
         <p class="card-text" *ngFor="let grupo of vecinoDetail.gruposDeInteres"><small class="text-body-secondary">{{grupo.nombre}}</small></p>
       </div>
     </div>
   </div>
-  <ul class="list-group">
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      Publicaciones
-      <div class="buttons-container">
-        <button type="button" class="btn" (click)="onSelected(vecinoDetail)" >Ver</button>
-        <button type="button" class="btn">Agregar</button>
-      </div>
-    </li>
-    
-    
-  </ul>
-
+ 
+   
+   
+    <div class="d-flex justify-content-center mt-3 mb-3">
+    <button type="button" class="btn btn-secondary"(click)="onSelected(vecinoDetail)">Ver Publicaciones</button>
+  </div>
 <div *ngIf="selected">
   <app-publicacion [vecinoDetail]="selectedVecino">  </app-publicacion>
 </div>

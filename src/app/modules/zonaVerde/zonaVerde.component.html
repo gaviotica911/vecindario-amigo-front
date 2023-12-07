@@ -1,71 +1,62 @@
-<!-- Your existing Angular component template with the modified dropdown -->
+<!-- Your modified Angular component template for zonaVerde with the similar structure as centroComercial -->
 <div class="container mt-5">
-    <div class="card shadow-sm text-white">
-      <div class="card-body">
-        <h1 class="card-title text-center">Bienvenidos a la Sección de Zonas Verdes</h1>
-        <hr style="margin-bottom: 1hr;">
-        <p class="text-center">¿Qué te gustaría hacer?</p>
-  
-        <!-- Multiple selection buttons for sorting -->
-        <div class="btn-group">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            [class.active]="sortBy === 'id'"
-            (click)="sortBy = 'id'; onSortChange()"
-          >
-            ID
-          </button>
-          <button
-            type="button"
-            class="btn btn-secondary"
-            [class.active]="sortBy === 'nombre'"
-            (click)="sortBy = 'nombre'; onSortChange()"
-          >
-            Nombre
-          </button>
-        </div>
-  
-        <!-- Your existing table code -->
-        <div class="mt-3">
-          <table class="table">
+  <div class="card shadow-sm text-white">
+    <div class="card-body">
+
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          [class.active]="sortBy === 'id'"
+          (click)="sortBy = 'id'; onSortChange()"
+        >
+          ID
+          <span *ngIf="sortBy === 'id' && ascendingOrder">&#9650;</span>
+          <span *ngIf="sortBy === 'id' && !ascendingOrder">&#9660;</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          [class.active]="sortBy === 'nombre'"
+          (click)="sortBy = 'nombre'; onSortChange()"
+        >
+          Nombre
+          <span *ngIf="sortBy === 'nombre' && ascendingOrder">&#9650;</span>
+          <span *ngIf="sortBy === 'nombre' && !ascendingOrder">&#9660;</span>
+        </button>
+      </div>
+
+      <div class="d-flex">
+        <div class="mt-3" [ngStyle]="getTableStyle()">
+          <table class="table" style="width: 30%;">
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Vecindario</th>
-                <th>Calificación</th>
-                <th>Acciones</th>
-
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let zonaVerde of zonaVerdes">
+              <tr *ngFor="let zonaVerde of zonaVerdes" (click)="verDetalle(zonaVerde)" style="cursor: pointer;">
                 <td>{{ zonaVerde.id }}</td>
                 <td>{{ zonaVerde.nombre }}</td>
-                <td>{{ zonaVerde.vecindario.nombre }}</td>
-                <td>{{ zonaVerde.calificacion }}</td>
-               
-                <td>
-                  <button class="btn btn-dark text-white" (click)="verDetalle(zonaVerde)">Ver detalle</button>
-                </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <!-- Display detailed information when selectedZonaVerde is not null -->
-        <div *ngIf="selectedZonaVerde">
-          <h2 class="mt-3">Detalles de la zona verde</h2>
-          <p><strong>ID:</strong> {{ selectedZonaVerde.id }}</p>
-          <p><strong>Nombre:</strong> {{ selectedZonaVerde.nombre }}</p>
-          <p><strong>Calificación:</strong> {{ selectedZonaVerde.calificacion }}</p>
-          <p><strong>Ubicación:</strong> {{ selectedZonaVerde.ubicacion }}</p>
-          <p><strong>Vecindario:</strong> {{ selectedZonaVerde.vecindario.nombre }}</p>
-          <p><strong>Descripción:</strong> {{ selectedZonaVerde.descripcion }}</p>
-          <p><strong>Descripción:</strong> {{ selectedZonaVerde.preferencias }}</p>
-
+        <div *ngIf="selectedZonaVerde" class="card" style="width: 30%; background-color: #AACFE9;">
+          <div class="card-body">
+            <h2 class="mt-3">Detalles de la zona verde</h2>
+            <p><strong>ID:</strong> {{ selectedZonaVerde.id }}</p>
+            <p><strong>Nombre:</strong> {{ selectedZonaVerde.nombre }}</p>
+            <p><strong>Calificación:</strong> {{ selectedZonaVerde.calificacion }}</p>
+            <p><strong>Ubicación:</strong> {{ selectedZonaVerde.ubicacion }}</p>
+            <p><strong>Vecindario:</strong> {{ selectedZonaVerde.vecindario.nombre }}</p>
+            <p><strong>Descripción:</strong> {{ selectedZonaVerde.descripcion }}</p>
+            <p><strong>Preferencias:</strong> {{ selectedZonaVerde.preferencias }}</p>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
-  
+</div>

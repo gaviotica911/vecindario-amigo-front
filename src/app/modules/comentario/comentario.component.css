@@ -5,4 +5,6 @@
     object-fit: cover; /* asegura que la imagen se ajuste bien */
     margin-right: 10px; /* espacio entre la imagen y el texto */
   }
-  
+  p{
+    font-family: 'Libre Baskerville';
+  }

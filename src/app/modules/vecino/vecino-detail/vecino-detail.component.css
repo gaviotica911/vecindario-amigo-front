@@ -1,3 +1,8 @@
+.vecino-detail {
+   
+  font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
+}
+
 .col-md-4 {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
@@ -23,7 +28,7 @@
 
   .card-body{
     font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
-
+    font-size: 20px;
   }
   .list-group{
     font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
@@ -40,7 +45,7 @@
   
   .buttons-container .btn {
     color: #737373;
-    text-decoration: underline;
+ 
     margin-left: 10px;
   }
   
@@ -48,4 +53,11 @@
     display: flex;
     justify-content: space-between; /* Distribuye el espacio entre el texto y los botones */
     align-items: center; /* Alinea verticalmente */
+  }
+
+  .button{
+    align-items: center; 
+    font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
+    display: flex;
+    padding: 10px;
   }

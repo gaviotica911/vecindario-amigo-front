@@ -7,8 +7,9 @@
         <div *ngFor="let comment of getComentariosPerPublicacion(publicacion.id)" class="col mb-2">
           <ul class="list-group">
             <li class="list-group-item">
-              <img src="{{comment.publicacion.vecino.profilePic }}" class="comment-image">
-              {{comment.descripcion}}
+             
+             <p style="color: gray;">{{comment.nombre}} ha comentado: </p>
+             <p > {{comment.descripcion}} </p>
             </li>
           </ul>
         </div>      

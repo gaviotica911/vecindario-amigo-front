@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vecindarios.component.css']
 })
 export class VecindariosComponent implements OnInit {
-  displayVecindariosList: boolean = false;
+  displayVecindariosList: boolean = true;
   displayVecindariosDetalle: boolean = false;
 
   displayVecindariosListOrden: string = "";

@@ -1,29 +1,108 @@
-/* Estilo para los encabezados de la tabla */
-.card.list-vecindarios.mb-3 .table thead th {
-    background-color: rgba(255, 255, 255, 0.54); /* Fondo negro para el encabezado */
-    color: black; /* Color de texto blanco para el encabezado */
-    border-bottom: 2px solid black; /* Borde inferior para los encabezados de columna */
+#zona {
+    
+    padding: 20px;
+    border-radius: 10px; /* Esquinas redondeadas, ajusta este valor según necesites */
 }
 
-/* Estilo para las filas y celdas de la tabla */
-.card.list-vecindarios.mb-3 .table tbody tr, 
-.card.list-vecindarios.mb-3 .table tbody td {
-    background-color: rgba(255, 255, 255, 0.54); /* Fondo negro para filas y celdas */
-    color: black; /* Color de texto para filas y celdas */
-    border-color: black; /* Cambia el color del borde si es necesario */
+
+li{
+    font-size: 1.2rem; /* Tamaño de la letra */
+    margin-right: 20px; /* Espacio a la derecha de cada enlace */
+    color: black; /* Color de letra */
+    font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
+}
+#lista{ 
+    padding: 20px 0 0 0 0;
+    display: inline-block;
+}
+.central-list-container {
+  max-width: 600px; /* O el ancho máximo que prefieras */
+  margin: 0 auto; /* Esto centrará el div */
+  padding: 0 15px; /* Agrega algo de espacio en los lados */
 }
 
-/* Estilo para hacer que las celdas sean clickeables */
-.clickeable {
-    cursor: pointer; /* Cambia el cursor para indicar que es un elemento clickeable */
+.text-center {
+  text-align: center; /* Esto asegurará que la paginación esté centrada */
 }
 
-.pagination-buttons {
-    margin-top: 20px; /* Espacio adicional encima de los botones */
+#lista p{ 
+  color: gray;
+  font-size: 1rem; /* Tamaño de la letra */
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+background-color: #e6e7e8; 
+display: block;
+}
+
+#post{
+    padding: 20px;
+    display: inline-block;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.54); /* Color blanco con 54% de transparencia */
+    border-radius: 20px;
+    
   }
   
-  .pagination-buttons button {
-    min-width: 100px; /* Ancho mínimo para los botones */
-    margin: 0 15px; /* Espacio entre los botones */
+  .detail-container {
+    flex: 1; /* Ocupa una fracción del espacio disponible */
+
+    order:2;
+    
+    border-radius: 20px;
+    padding: 100px;
+
   }
   
+  .list-container {
+    flex: 1; /* Ocupa una fracción del espacio disponible */
+    order:1;
+  }
+
+
+  @media (max-width: 768px) {
+    #main-container {
+      flex-direction: column;
+    }
+  
+    .detail-container, .list-container {
+      order: 0; /* Restablece el orden para dispositivos móviles */
+    }
+  }
+img {
+    width: 40px; /* o el tamaño que prefieras */
+    height: 40px; /* igual al ancho para mantener la forma de círculo */
+    border-radius: 50%; /* esto hace que la imagen sea redonda */
+    object-fit: cover; /* asegura que la imagen se ajuste bien */
+    margin-right: 10px; /* espacio entre la imagen y el texto */
+  }
+  .d-flex {
+    display: flex; /* Utiliza flexbox para alinear los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente los elementos dentro de la fila */
+  }
+  
+  .comment-image {
+    width: 50px; /* o el tamaño que prefieras */
+    height: 50px; /* o el tamaño que prefieras */
+    border-radius: 50%; /* Si deseas que la imagen sea redonda */
+  }
+  
+  .ms-2 {
+    margin-left: 0.5rem; /* Añade un poco de espacio entre la imagen y el texto */
+  }
+  
+  .fw-bold {
+    font-weight: bold; /* Hace que el nombre del vecino sea en negrita */
+  }
+
+  #b{
+    text-align: center; 
+  font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
+  }

@@ -17,7 +17,27 @@ export class VecindariosListComponent implements OnInit, OnChanges {
 
   currentPage: number = 0;
   totalPages: number = 0;
+  displayVecindariosList: boolean = true;
+  displayVecindariosDetalle: boolean = false;
+
+  displayVecindariosListOrden: string = "";
+
+
+
+
   constructor(private VecindariosService: VecindariosService) { }
+
+  
+
+  showVecindariosList(orden?: string): void {
+  this.displayVecindariosListOrden = orden || ""; 
+  this.displayVecindariosList = true;
+  }
+
+  hideVecindariosList(): void {
+    this.displayVecindariosList = false;
+  }
+
 
   onSelected(vecindario: Vecindario): void {
     this.selected = true;
@@ -72,6 +92,7 @@ export class VecindariosListComponent implements OnInit, OnChanges {
       this.getVecindarios();
     }
   }
+  
 
   }
 

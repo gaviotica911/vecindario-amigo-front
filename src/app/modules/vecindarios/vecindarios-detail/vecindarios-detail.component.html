@@ -1,53 +1,44 @@
-<div class="container-fluid">
-  <div class="card shadow-sm">
-    <div class="card-body">
-      <!-- Título del Vecindario -->
-      <p class="h3 title-neighborhood">{{ vecindarioDetail.nombre }}</p>
-
-      <!-- Contenedor de detalles -->
-      <div class="row">
-        <div class="col">
-          <dl>
-            <!-- Detalles del Vecindario -->
-            <dt>Ciudad</dt>
-            <dd>{{ vecindarioDetail.ciudad }}</dd>
-            <hr />
-
-            <dt>Localidad</dt>
-            <dd>{{ vecindarioDetail.localidad }}</dd>
-            <hr />
-
-            <!-- Sección de Vecinos -->
-            <dt>Vecinos</dt>
-            <dd *ngIf="vecindarioDetail.vecinos && vecindarioDetail.vecinos.length > 0; else noVecinos">
-              <ul>
-                <li *ngFor="let vecino of vecindarioDetail.vecinos">{{ vecino.nombre }} - {{ vecino.edad }} años</li>
-              </ul>
-            </dd>
-            <ng-template #noVecinos>No hay vecinos registrados</ng-template>
-            <hr />
-
-            <!-- Sección de Negocios -->
-            <dt>Negocios</dt>
-            <dd *ngIf="vecindarioDetail.negocios && vecindarioDetail.negocios.length > 0; else noNegocios">
-              <ul>
-                <li *ngFor="let negocio of vecindarioDetail.negocios">{{ negocio.nombre }}</li>
-              </ul>
-            </dd>
-            <ng-template #noNegocios>No hay negocios registrados</ng-template>
-            <hr />
-
-            <!-- Sección de Zonas Verdes -->
-            <dt>Zonas Verdes</dt>
-            <dd *ngIf="vecindarioDetail.zonasVerdes && vecindarioDetail.zonasVerdes.length > 0; else noZonasVerdes">
-              <ul>
-                <li *ngFor="let zonaVerde of vecindarioDetail.zonasVerdes">{{ zonaVerde.nombre }}</li>
-              </ul>
-            </dd>
-            <ng-template #noZonasVerdes>No hay zonas verdes registradas</ng-template>
-          </dl>
-        </div>
+<div class="card mb-3" id="detail" style="max-width: 540px;">
+  <!-- Encabezado del card con imagen, nombre, ciudad y localidad -->
+  <div class="row g-0">
+    <div class="col-md-4 d-flex justify-content-center align-items-center">
+      <img  
+        class="img-fluid rounded-start"
+        src="https://valor-compartido.com/wp-content/uploads/2020/02/vecindario-eco.jpg"
+        alt="Imagen del Vecindario"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ vecindarioDetail.nombre }}</h5>
+        <p class="card-text">Ciudad: {{ vecindarioDetail.ciudad }}</p>
+        <p class="card-text">Localidad: {{ vecindarioDetail.localidad }}</p>
       </div>
     </div>
   </div>
+  <!-- Resto del contenido del card -->
+  <div class="card-body">
+    <p class="card-text">
+      <small class="text-muted">Vecinos:</small>
+      <ul *ngIf="vecindarioDetail.vecinos && vecindarioDetail.vecinos.length > 0; else noVecinos">
+        <li *ngFor="let vecino of vecindarioDetail.vecinos">{{ vecino.nombre }} - {{ vecino.edad }} años</li>
+      </ul>
+      <ng-template #noVecinos>No hay vecinos registrados</ng-template>
+  
+    <p class="card-text">
+      <small class="text-muted">Negocios:</small>
+      <ul *ngIf="vecindarioDetail.negocios && vecindarioDetail.negocios.length > 0; else noNegocios">
+        <li *ngFor="let negocio of vecindarioDetail.negocios">{{ negocio.nombre }}</li>
+      </ul>
+      <ng-template #noNegocios>No hay negocios registrados</ng-template>
+ 
+    <p class="card-text">
+      <small class="text-muted">Zonas Verdes:</small>
+      <ul *ngIf="vecindarioDetail.zonasVerdes && vecindarioDetail.zonasVerdes.length > 0; else noZonasVerdes">
+        <li *ngFor="let zonaVerde of vecindarioDetail.zonasVerdes">{{ zonaVerde.nombre }}</li>
+      </ul>
+      <ng-template #noZonasVerdes>No hay zonas verdes registradas</ng-template>
+
+  </div>
+  
 </div>

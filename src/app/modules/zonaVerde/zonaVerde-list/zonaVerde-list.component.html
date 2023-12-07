@@ -1,9 +1,7 @@
 
 <div class="container-fluid" id="zona">
   <div class="container-fluid" id="lista">
-    <div class="text-end">
-      <pagination-controls (pageChange)="p = $event"></pagination-controls>
-    </div>
+   
   
     <br />
  
@@ -21,5 +19,9 @@
            
        </div>
        </div>
+       <div class="text-end">
+        <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+
+      </div>
  
  </div>

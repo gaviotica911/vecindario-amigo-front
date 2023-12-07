@@ -9,9 +9,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
-  imports: [
-    CommonModule,RouterModule, NgxPaginationModule
-  ],
+  imports: [CommonModule,RouterModule, NgxPaginationModule],
   exports: [ZonaVerdeComponent],
   declarations: [ZonaVerdeComponent]
 })

@@ -1,63 +1,102 @@
 #zona {
+    
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 10px; /* Esquinas redondeadas, ajusta este valor según necesites */
 }
 
-li {
-  font-size: 1.2rem;
-  margin-right: 200px;
-  color: black;
-  font-family: 'Libre Baskerville';
-  width: 100%; /* Hace que el <li> tome todo el ancho disponible */
+
+li{
+  font-size: 1.2rem; /* Tamaño de la letra */
+  margin-right: 20px; /* Espacio a la derecha de cada enlace */
+  color: black; /* Color de letra */
+  font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
+}
+#lista{ 
+  padding: 20px 0 0 0 0;
+  display: inline-block;
+}
+.central-list-container {
+max-width: 600px; /* O el ancho máximo que prefieras */
+margin: 0 auto; /* Esto centrará el div */
+padding: 0 15px; /* Agrega algo de espacio en los lados */
 }
 
-#lista { 
-  padding: 20px; /* Reducido de 100px */
-  display: block; /* Cambiado de inline-block a block */
+.text-center {
+text-align: center; /* Esto asegurará que la paginación esté centrada */
+}
+
+#lista p{ 
+color: gray;
+font-size: 1rem; /* Tamaño de la letra */
+}
+.cursor-pointer {
+cursor: pointer;
+}
+
+.list-group-item:hover {
+background-color: #e6e7e8; 
+display: block;
+}
+
+#post{
+  padding: 20px;
+  display: inline-block;
 }
 
 #main-container {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.54);
+  background-color: rgba(255, 255, 255, 0.54); /* Color blanco con 54% de transparencia */
   border-radius: 20px;
 }
 
 .detail-container {
-  flex: 1;
-  order: 2;
+  flex: 1; /* Ocupa una fracción del espacio disponible */
+
+  order:2;
+  
   border-radius: 20px;
-  padding: 100px; /* Opcional: considera reducir el padding si es demasiado grande */
+  padding: 100px;
+
 }
 
 .list-container {
-  flex: 1;
-  order: 1;
+  flex: 1; /* Ocupa una fracción del espacio disponible */
+  order:1;
 }
 
 
-  .cursor-pointer {
-    cursor: pointer;
-}
-
-.list-group-item:hover {
-  background-color: #e6e7e8; /* Este es un color de ejemplo, puedes usar el que prefieras */
-}
-
-  @media (max-width: 768px) {
-    #main-container {
-      flex-direction: column;
-    }
-  
-    .detail-container, .list-container {
-      order: 0; /* Restablece el orden para dispositivos móviles */
-    }
+@media (max-width: 768px) {
+  #main-container {
+    flex-direction: column;
   }
+
+  .detail-container, .list-container {
+    order: 0; /* Restablece el orden para dispositivos móviles */
+  }
+}
 img {
-    width: 40px; /* o el tamaño que prefieras */
-    height: 40px; /* igual al ancho para mantener la forma de círculo */
-    border-radius: 50%; /* esto hace que la imagen sea redonda */
-    object-fit: cover; /* asegura que la imagen se ajuste bien */
-    margin-right: 10px; /* espacio entre la imagen y el texto */
-  }
-  
+  width: 40px; /* o el tamaño que prefieras */
+  height: 40px; /* igual al ancho para mantener la forma de círculo */
+  border-radius: 50%; /* esto hace que la imagen sea redonda */
+  object-fit: cover; /* asegura que la imagen se ajuste bien */
+  margin-right: 10px; /* espacio entre la imagen y el texto */
+}
+.d-flex {
+  display: flex; /* Utiliza flexbox para alinear los elementos horizontalmente */
+  align-items: center; /* Alinea verticalmente los elementos dentro de la fila */
+}
+
+.comment-image {
+  width: 50px; /* o el tamaño que prefieras */
+  height: 50px; /* o el tamaño que prefieras */
+  border-radius: 50%; /* Si deseas que la imagen sea redonda */
+}
+
+.ms-2 {
+  margin-left: 0.5rem; /* Añade un poco de espacio entre la imagen y el texto */
+}
+
+.fw-bold {
+  font-weight: bold; /* Hace que el nombre del vecino sea en negrita */
+}

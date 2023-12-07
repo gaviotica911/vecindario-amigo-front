@@ -5,29 +5,41 @@
   </div>
 
   <div class="list-container">
-    <div class="text-end">
-      <pagination-controls (pageChange)="p = $event"></pagination-controls>
-    </div>
     <div class="container-fluid" id="zona">
-      <div class="container-fluid" id="botones-ordenamiento">
-        <button (click)="ordenarAscendente()" class="btn btn-primary">Ordenar Ascendente</button>
-        <button (click)="ordenarDescendente()" class="btn btn-secondary">Ordenar Descendente</button>
-      </div>
-
-      <div class="container-fluid" id="lista">
-        
+      <div class="central-list-container">
+        <div class="container-fluid" id="botones-ordenamiento">
+          <button (click)="ordenarAscendente()" class="btn btn-primary">
+            Ordenar Ascendente
+          </button>
+          <button (click)="ordenarDescendente()" class="btn btn-secondary">
+            Ordenar Descendente
+          </button>
+        </div>
+        <br />
         <ul class="list-group">
-          <div *ngFor="let negocio of negocios  | paginate : { itemsPerPage: 10, currentPage: p }" class="col mb-2">
-            <ul class="list-group">
-              <li class="list-group-item cursor-pointer list-group-item:hover " (click)="onSelected(negocio)">
-                {{ negocio.nombre }} - Calificación: {{ negocio.calificacion }}
-              </li>
-            </ul>
-          </div>      
+          <div
+            *ngFor="
+              let negocio of negocios
+                | paginate : { itemsPerPage: 10, currentPage: p }
+            "
+            class="col mb-2"
+          >
+            <li
+              class="list-group-item cursor-pointer list-group-item:hover"
+              (click)="onSelected(negocio)"
+            >
+              {{ negocio.nombre }} - Calificación: {{ negocio.calificacion }}
+            </li>
+          </div>
         </ul>
-       
+        <div class="text-end">
+          <pagination-controls
+            (pageChange)="p = $event"
+            previousLabel="Anterior"
+            nextLabel="Siguiente"
+          ></pagination-controls>
+        </div>
       </div>
     </div>
   </div>
 </div>
-

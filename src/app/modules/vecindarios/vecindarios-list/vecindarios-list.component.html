@@ -1,4 +1,65 @@
-  <hr />
+<div class="container-fluid" id="main-container">
+  <div *ngIf="selected" class="detail-container">
+    <app-vecindarios-detail [vecindarioDetail]="selectedVecindario"></app-vecindarios-detail>
+  </div>
+
+  <div class="list-container">
+    <div class="container-fluid" id="zona">
+      <div class="central-list-container">
+        <div class="container-fluid" id="b">
+          <button (click)="showVecindariosList('ascendente')" class="btn btn-primary">
+            Ordenar ascendente
+          </button>
+          <button (click)="showVecindariosList('descendente')" class="btn btn-secondary">
+            Ordenar descendente
+          </button>
+        </div>
+        <br />
+
+        <ul class="list-group">
+          <!-- Encabezado de la lista con espacio adicional -->
+          <li class="list-group-item fw-bold py-2" id="a">
+            <div class="row">
+              <div class="col">Nombre</div>
+              <div class="col">Ciudad</div>
+              <div class="col">Localidad</div>
+            </div>
+          </li>
+          <br>
+          <!-- Elementos de la lista -->
+          <div *ngFor="let vecindario of vecindarios" class="col mb-2">
+            <li class="list-group-item cursor-pointer" (click)="onSelected(vecindario)">
+              <div class="row">
+                <div class="col">{{ vecindario.nombre }}</div>
+                <div class="col">{{ vecindario.ciudad }}</div>
+                <div class="col">{{ vecindario.localidad }}</div>
+              </div>
+            </li>
+          </div>
+        </ul>
+        
+      </div>
+      <div class="pagination-buttons mt-2 d-flex justify-content-center" id="b">
+        <button class="btn btn-primary mx-3" (click)="goToPreviousPage()" [disabled]="currentPage === 0">
+          Anterior
+        </button>
+        <button class="btn btn-primary mx-3" (click)="goToNextPage()" [disabled]="currentPage === totalPages - 1">
+          Siguiente
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+
+<!--
+
+
+
+
+
+
 
  <div class="container-fluid mt-3">
   <div class="row align-items-center justify-content-center">
@@ -37,3 +98,4 @@
   </div>
 </div>
 
+-->

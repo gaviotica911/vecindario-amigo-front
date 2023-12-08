@@ -12,6 +12,8 @@
           (click)="sortBy = 'id'; onSortChange()"
         >
           ID
+          <span *ngIf="sortBy === 'id' && ascendingOrder">&#9650;</span>
+          <span *ngIf="sortBy === 'id' && !ascendingOrder">&#9660;</span>
         </button>
         <button
           type="button"
@@ -20,6 +22,8 @@
           (click)="sortBy = 'nombre'; onSortChange()"
         >
           Nombre
+          <span *ngIf="sortBy === 'nombre' && ascendingOrder">&#9650;</span>
+          <span *ngIf="sortBy === 'nombre' && !ascendingOrder">&#9660;</span>
         </button>
       </div>
 

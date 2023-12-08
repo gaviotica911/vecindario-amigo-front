@@ -1,107 +1,53 @@
-#zona {
-    
-  padding: 20px;
-  border-radius: 10px; /* Esquinas redondeadas, ajusta este valor según necesites */
-}
-
-
-li{
-  font-size: 1.2rem; /* Tamaño de la letra */
-  margin-right: 20px; /* Espacio a la derecha de cada enlace */
-  color: black; /* Color de letra */
-  font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
-}
-#lista{ 
-  padding: 20px 0 0 0 0;
-  display: inline-block;
-}
-.central-list-container {
-max-width: 600px; /* O el ancho máximo que prefieras */
-margin: 0 auto; /* Esto centrará el div */
-padding: 0 15px; /* Agrega algo de espacio en los lados */
-}
-
-.text-center {
-text-align: center; /* Esto asegurará que la paginación esté centrada */
-}
-
-#lista p{ 
-color: gray;
-font-size: 1rem; /* Tamaño de la letra */
-}
-.cursor-pointer {
-cursor: pointer;
-}
-
-.list-group-item:hover {
-background-color: #e6e7e8; 
-display: block;
-}
-
-#post{
-  padding: 20px;
-  display: inline-block;
-}
-
-#main-container {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.54); /* Color blanco con 54% de transparencia */
+.card.shadow-sm.text-white {
+  background-color: rgba(255, 255, 255, 0.54);
   border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.detail-container {
-  flex: 1; /* Ocupa una fracción del espacio disponible */
-
-  order:2;
-  
-  border-radius: 20px;
-  padding: 100px;
-
+.card-body {
+  font-family: 'Arial', sans-serif;
+  color: #000; /* Black text color */
 }
 
-.list-container {
-  flex: 1; /* Ocupa una fracción del espacio disponible */
-  order:1;
+.card-title {
+  font-size: 1.75em;
+  margin-bottom: 0.5em;
+  color: #000; /* Black text color */
 }
 
-
-@media (max-width: 768px) {
-  #main-container {
-    flex-direction: column;
-  }
-
-  .detail-container, .list-container {
-    order: 0; /* Restablece el orden para dispositivos móviles */
-  }
-}
-img {
-  width: 40px; /* o el tamaño que prefieras */
-  height: 40px; /* igual al ancho para mantener la forma de círculo */
-  border-radius: 50%; /* esto hace que la imagen sea redonda */
-  object-fit: cover; /* asegura que la imagen se ajuste bien */
-  margin-right: 10px; /* espacio entre la imagen y el texto */
-}
-.d-flex {
-  display: flex; /* Utiliza flexbox para alinear los elementos horizontalmente */
-  align-items: center; /* Alinea verticalmente los elementos dentro de la fila */
+.card-body p {
+  font-size: 1.1em;
 }
 
-.comment-image {
-  width: 50px; /* o el tamaño que prefieras */
-  height: 50px; /* o el tamaño que prefieras */
-  border-radius: 50%; /* Si deseas que la imagen sea redonda */
+.btn {
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.ms-2 {
-  margin-left: 0.5rem; /* Añade un poco de espacio entre la imagen y el texto */
+.btn:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-.fw-bold {
-  font-weight: bold; /* Hace que el nombre del vecino sea en negrita */
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
 }
 
-#b{
-  padding-bottom: 10px;
-  font-family: 'Libre Baskerville';/* Fuente limpia y moderna */
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.moveToLeft {
+  justify-content: flex-start;
 }

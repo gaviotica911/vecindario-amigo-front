@@ -1,72 +1,9 @@
-<!--
-
-<div class="container-fluid" id="main-container">
-  <div *ngIf="selectedCentroComercial" class="detail-container">
-  
-    <h2 class="mt-3">Detalles del Centro Comercial</h2>
-
-  </div>
-
-  <div class="list-container">
-    <div class="container-fluid" id="zona">
-      <div class="central-list-container">
-        <div class="card shadow-sm text-white">
-          <div class="card-body">
-            <div class="btn-group" id="b">
-           
-              <button
-                type="button"
-                class="btn btn-secondary"
-                [class.active]="sortBy === 'id'"
-                (click)="sortBy = 'id'; onSortChange()">
-                ID
-                <span *ngIf="sortBy === 'id' && ascendingOrder">&#9650;</span>
-                <span *ngIf="sortBy === 'id' && !ascendingOrder">&#9660;</span>
-              </button>
-              <button
-                type="button"
-                class="btn btn-secondary"
-                [class.active]="sortBy === 'nombre'"
-                (click)="sortBy = 'nombre'; onSortChange()">
-                Nombre
-                <span *ngIf="sortBy === 'nombre' && ascendingOrder">&#9650;</span>
-                <span *ngIf="sortBy === 'nombre' && !ascendingOrder">&#9660;</span>
-              </button>
-            
-            </div>
-          <br>
-              <ul class="list-group">
-              <div *ngFor="let centroComercial of centroComerciales " class="col mb-2">
-               
-                <li class="list-group-item cursor-pointer list-group-item:hover " (click)="verDetalle(centroComercial)">
-                 {{centroComercial.id}} - {{ centroComercial.nombre }}
-                </li>
-                
-              </div>
-                  
-                </ul>
-        
-              
-            </div>
-            <div class="pagination-buttons mt-2 d-flex justify-content-center" id="b">
-              <button class="btn btn-primary mx-3" (click)="goToPreviousPage()" [disabled]="currentPage === 0">Previous</button>
-              <button class="btn btn-primary mx-3" (click)="goToNextPage()" [disabled]="currentPage === totalPages - 1">Next</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
--->
-
-
-
-<!-- centroComercial.component.html -->
-
+<!-- Your existing Angular component template with the modified dropdown -->
 <div class="container mt-5">
   <div class="card shadow-sm text-white">
     <div class="card-body">
 
+      <!-- Multiple selection buttons for sorting -->
       <div class="btn-group">
         <button
           type="button"
@@ -75,8 +12,6 @@
           (click)="sortBy = 'id'; onSortChange()"
         >
           ID
-          <span *ngIf="sortBy === 'id' && ascendingOrder">&#9650;</span>
-          <span *ngIf="sortBy === 'id' && !ascendingOrder">&#9660;</span>
         </button>
         <button
           type="button"
@@ -85,11 +20,10 @@
           (click)="sortBy = 'nombre'; onSortChange()"
         >
           Nombre
-          <span *ngIf="sortBy === 'nombre' && ascendingOrder">&#9650;</span>
-          <span *ngIf="sortBy === 'nombre' && !ascendingOrder">&#9660;</span>
         </button>
       </div>
 
+      <!-- Your modified layout with dynamic styles -->
       <div class="d-flex">
         <div class="mt-3" [ngStyle]="getTableStyle()">
           <table class="table">
@@ -101,18 +35,22 @@
             <tbody>
               <tr *ngFor="let centroComercial of centroComerciales">
                 <td>
-                  <a href="javascript:void(0);" style="color: black;" (click)="verDetalle(centroComercial)">
-                    {{ centroComercial.nombre }}
-                  </a>
+                  <a href="javascript:void(0);" style="color: black;" (click)="verDetalle(centroComercial)">{{ centroComercial.nombre }}</a>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
         <div *ngIf="selectedCentroComercial" style="width: 40%;">
+          <!-- Display detailed information when selectedCentroComercial is not null -->
           <div>
             <h2 class="mt-3">Detalles del Centro Comercial</h2>
-            <!-- ... (remaining details) -->
+            <p><strong>ID:</strong> {{ selectedCentroComercial.id }}</p>
+            <p><strong>Nombre:</strong> {{ selectedCentroComercial.nombre }}</p>
+            <p><strong>Calificación:</strong> {{ selectedCentroComercial.calificacion }}</p>
+            <p><strong>Ubicación:</strong> {{ selectedCentroComercial.ubicacion }}</p>
+            <p><strong>Vecindario:</strong> {{ selectedCentroComercial.vecindario.nombre }}</p>
+            <p><strong>Descripción:</strong> {{ selectedCentroComercial.descripcion }}</p>
           </div>
         </div>
       </div>

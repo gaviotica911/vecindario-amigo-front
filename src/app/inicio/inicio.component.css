@@ -105,13 +105,14 @@ body, html {
   display: grid;
   place-items: center;
   height: 200px;
+
 }
 #mas h1{
   font-family: 'Libre Baskerville', serif;
   color: black;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  margin-bottom: 0.5em;
-  font-size: 2em;
+  
+  font-size: 2.1em;
   font-weight: bold;
 }
 #mas li{
@@ -119,6 +120,22 @@ body, html {
   color: black;
   
   margin-bottom: 0.5em;
-  font-size: 1.1em;
+  font-size: 1.3em;
   
+}
+#mas p{
+  font-family: 'Libre Baskerville', serif;
+  color: black;
+  
+  font-size: 1.3em;
+
+}
+
+#img{
+  width: 300px; /* o el tamaño que prefieras */
+  height: 300px; /* igual al ancho para mantener la forma de círculo */
+  
+  object-fit: cover; /* asegura que la imagen se ajuste bien */
+  margin-right: 10px; /* espacio entre la imagen y el texto */
+  align-items: center; /* Centra verticalmente */
 }
